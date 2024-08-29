@@ -1,0 +1,58 @@
+---
+import Container from "../components/Container.astro";
+import  Navitem from "../components/Navitem.astro";
+import { basics } from "datos.json";
+import Button from "./Button.astro";
+const { email } = basics
+import '@fontsource-variable/tourney';
+const navItems = [
+    {
+        href:"#",
+        text:"Inicio"
+    },
+    {
+        href:"#about-us",
+        text:"Nosotros"
+    },
+    {
+        href:"#",
+        text:"Streaming"
+    },
+]
+---
+
+<header class="absolute inset-x-0 top-0 z-50 py-6">
+    <Container>
+        <nav class="w-full flex justify-between gap-6 relative">
+            <!-- logo -->
+            <div class="min-w-max inline-flex relative">
+                <a href="/" class="relative flex items-center gap-3">
+                    <div class="inline-flex text-2xl font-semibold text-heading-1">
+                        <span class="underline font-tourney font-bold">HR</span><span class="text-red-400 font-tourney font-normal">ISSAN</span>
+                    </div>
+                </a>
+            </div>
+            <div data-nav-overlay aria-hidden="true" class="fixed hidden inset-0 lg:!hidden bg-box-bg bg-opacity-50 backdrop-filter backdrop-blur-xl"></div>
+            <div data-navbar class="flex h-0 overflow-hidden lg:!h-auto lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full lg:top-0 bg-body lg:bg-transparent border-x border-x-box-border lg:border-x-0">
+                <ul class="border-t border-box-border lg:border-t-0 px-6 lg:px-0 pt-6 lg:pt-0 flex flex-col lg:flex-row gap-y-4 gap-x-3 text-lg text-heading-2 w-full lg:justify-center lg:items-center">
+                    {navItems.map(item=>{
+                        return <Navitem {...item}/>
+                    })
+                    }
+                </ul>
+
+                <div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
+                    <Button text="Tienda" href={email} className="flex justify-center w-full sm:w-max" variant="primary"/>
+                </div>
+            </div>
+            <div class="min-w-max flex items-center gap-x-3"> 
+                <button data-toggle-nav data-open-nav="false" class="lg:hidden lg:invisible outline-none w-7 h-auto flex flex-col relative">
+                    <span id="line1" class="w-6 h-0.5 rounded-full bg-heading-2 transition-all duration-300 ease-linear"></span> 
+                    <span id="line2" class="w-6 origin-center  mt-1 h-0.5 rounded-ful bg-heading-2 transition-all duration-300 ease-linear"></span> 
+                    <span id="line3" class="w-6 mt-1 h-0.5 rounded-ful bg-heading-2 transition-all duration-300 ease-linear"></span>                         
+                    <span class="sr-only">togglenav</span>
+                </button>
+            </div>
+        </nav>
+    </Container>
+</header>

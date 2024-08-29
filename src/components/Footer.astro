@@ -1,0 +1,124 @@
+---
+import { basics } from "datos.json";
+import Container from "./Container.astro";
+import Paragraph from "./Paragraph.astro";
+import YouTube from "./icons/YouTube.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import Instragram from "./icons/Instragram.astro";
+import Mail from "./icons/Mail.astro";
+
+const { logo, email, urlLinkedin, urlInstagram, urlYoutube } = basics;
+
+const footerCompany = [
+  {
+    itemText: "Inicio",
+    itemLink: "",
+  },
+  {
+    itemText: "Nosotros",
+    itemLink: "#",
+  },
+  {
+    itemText: "Streaming",
+    itemLink: "#",
+  },
+  {
+    itemText: "Tienda",
+    itemLink: "#",
+  },
+];
+---
+
+<div class="mt-16"></div>
+<footer class="relative bg-gradient-to-tr from-gray-900 pt-16 rounded-t-3xl">
+  <div class="absolute right-0 top-0 h-full w-full flex justify-end">
+    <div class="w-16 h-16 overflow-auto flex rounded-xl relative blur-2xl">
+      <span
+        class="absolute w-16 h-16 -top-1 -right-1 bg-red-500 rounded-md rotate-45"
+      ></span>
+      <span
+        class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+      ></span>
+      <span
+        class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+      ></span>
+    </div>
+  </div>
+
+  <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
+    <div class="w-16 h-16 overflow-auto flex rounded-xl relative blur-2xl">
+      <span
+        class="absolute w-16 h-16 -top-1 -right-1 bg-red-500 rounded-md rotate-45"
+      ></span>
+      <span
+        class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+      ></span>
+      <span
+        class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+      ></span>
+    </div>
+  </div>
+  <Container className="pb-8 relative overflow-auto">
+    <span
+      class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 blur-2xl opacity-20 w-24 h-16 sm:w-48 sm:h-36 rounded-full rotate-12 skew-x-6
+        bg-primary"
+    ></span>
+    <div
+      class="grid grid-cols-2 lg:grid-cols-3 lg:items-stretch gap-8 relative"
+    >
+      <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
+        <div class="h-full">
+          <a href="#" class="relative flex items-center gap-3">
+            <div class="inline-flex text-[30px] font-semibold text-heading-1">
+              <span class="underline font-tourney font-bold">HR</span><span
+                class="text-red-400 font-tourney font-normal">ISSAN</span
+              >
+            </div>
+          </a>
+          <Paragraph className={"mt-8"}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+            maiores nam doloribus id magni
+          </Paragraph>
+        </div>
+        <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
+          <a href="#" class="transition hover:text-heading-1 hover:scale-105">
+            <LinkedIn />
+          </a>
+          <a href="#" class="transition hover:text-heading-1 hover:scale-105">
+            <YouTube />
+          </a>
+          <a href="#" class="transition hover:text-heading-1 hover:scale-105">
+            <Instragram />
+          </a>
+          <a href="#" class="transition hover:text-heading-1 hover:scale-105">
+            <Mail />
+          </a>
+        </div>
+      </div>
+      <div class="mb-8 text-center lg:col-6 lg:mb-0 flex justify-center items-center">
+        <ul class="space-y-3 font-medium md:text-lg text-heading-3">
+          {footerCompany.map((navItem)=>(
+            <li class="m-3 inline-block">
+                <a href={navItem.itemLink} class="transition hover:text-primary">
+                    {navItem.itemText}
+                </a>
+            </li>
+        ))
+        }
+        </ul>
+      </div>
+    </div>
+  </Container>
+  <div class="bg-gradient-to-tl from-box-bg py-2 relative">
+    <Container>
+      <div
+        class="flex justify-between items-center gap-6 md:text-lg text-heading-3"
+      >
+        <div>
+          &copy; <span id="year"></span>
+          <a class="text-sm" href="">GBrumatti.</a>
+        </div>
+      </div>
+    </Container>
+  </div>
+</footer>
