@@ -28,6 +28,62 @@ const footerCompany = [
   },
 ];
 ---
+<footer class="footer bg-gradient-to-tr from-gray-900">
+  <div class="container">
+    <div class="gx-5 row pb-10 pt-[52px]">
+      <div class="col-12 mt-12 md:col-6 lg:col-3">
+        <a href="https://hrissan.com.ar/" target="_blank" class="">
+          <img src="/public/hrissan.png" alt="Logo HRissan">
+      </a>
+        <p class="mt-6">
+          {footer_description}
+        </p>
+      </div>
+      <div class="col-12 mt-12 md:col-6 lg:col-3">
+        <h6>Socials</h6>
+
+        <Social source={social} className="social-icons mt-4 lg:mt-6" />
+      </div>
+      <div class="col-12 mt-12 md:col-6 lg:col-3">
+        <h6>Quick Links</h6>
+        <ul>
+          {
+            footer.map((item, i) => (
+              <li class={footer.length - 1 === i ? "mb-0" : "mb-4"}>
+                <a class="hover:text-primary hover:underline " href={item.url}>
+                  {item.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="col-12 mt-12 md:col-6 lg:col-3">
+        <h6>Location & Contact</h6>
+        <ul>
+          <li class="mb-2">{location}</li>
+          <li class="mb-2">
+            <a class="mb-2 hover:text-primary" href={`mailto:${email}`}
+              >{email}</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-primary hover:underline" href={`tel:${phone}`}
+              >{phone}</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container max-w-[1440px]">
+    <div
+      class="footer-copyright mx-auto border-t border-border pb-10 pt-7 text-center"
+    >
+      <p class="content text-text" set:html={markdownify(copyright)} />
+    </div>
+  </div>
+</footer>
 
 <div class="mt-16"></div>
 <footer class="relative bg-gradient-to-tr from-gray-900 pt-16 rounded-t-3xl">
@@ -68,12 +124,8 @@ const footerCompany = [
     >
       <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
         <div class="h-full">
-          <a href="#" class="relative flex items-center gap-3">
-            <div class="inline-flex text-[30px] font-semibold text-heading-1">
-              <span class="underline font-tourney font-bold">HR</span><span
-                class="text-red-400 font-tourney font-normal">ISSAN</span
-              >
-            </div>
+          <a href="https://hrissan.com.ar/" target="_blank" class="relative flex items-center gap-3">
+              <img src="/public/hrissan.png" alt="Logo HRissan">
           </a>
           <Paragraph className={"mt-8"}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
@@ -116,9 +168,16 @@ const footerCompany = [
       >
         <div>
           &copy; <span id="year"></span>
-          <a class="text-sm" href="">GBrumatti.</a>
+          <a class="text-sm" href="https://cv-gbrumatti-web.vercel.app/" target="_blank">GBrumatti.</a>
         </div>
       </div>
     </Container>
   </div>
 </footer>
+
+<style>
+  img {
+    max-width: 190px;  /* Ajusta el ancho máximo */
+    height: auto;      /* Mantiene la proporción de la imagen */
+}
+</style>
