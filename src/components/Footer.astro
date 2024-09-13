@@ -9,7 +9,7 @@ import YouTube from "./icons/YouTube.astro";
 import Paragraph from "./elements/Paragraph.astro";
 
 import { basics } from "datos.json";
-const { urlLinkedin, urlInstagram, urlYoutube, email } = basics;
+const { urlLinkedin, urlInstagram, urlYoutube, email, avatar } = basics;
 
 const footerNav1 = [
   {
@@ -106,7 +106,7 @@ const footerNav3 = [
       <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
         <div class="h-full">
           <a href="#" class="relative flex items-center gap-3">
-            <img src="/public/logo2.png" alt="logo" class="max-h-10" />
+            <img src={avatar} alt="logo" class="max-h-10" />
             <div class="inline-flex text-3xl font-semibold text-heading-1">
               <span class="underline font-tourney font-bold">HR</span><span
                 class="text-red-400 font-tourney font-normal">ISSAN</span

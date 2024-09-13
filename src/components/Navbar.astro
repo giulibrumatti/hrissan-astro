@@ -4,7 +4,7 @@ import { basics } from "datos.json";
 import Container from "./elements/Container.astro";
 import Navitem from "./elements/Navitem.astro";
 import Button from "./elements/Button.astro";
-const { email } = basics
+const { email, avatar } = basics
 const navItems = [
     {
         href:"#",
@@ -31,7 +31,7 @@ const navItems = [
             <!-- logo -->
             <div class="min-w-max inline-flex relative">
                 <a href="/" class="relative flex items-center gap-3">
-                    <img src="/public/logo2.png" alt="logo" class="max-h-10">
+                    <img src={avatar} alt="logo" class="max-h-10">
                     <div class="inline-flex text-3xl font-semibold text-heading-1">
                         <span class="underline font-tourney font-bold">HR</span><span class="text-red-400 font-tourney font-normal">ISSAN</span>
                     </div>
