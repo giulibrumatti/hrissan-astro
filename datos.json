@@ -2,10 +2,10 @@
     "basics": {
       "logo": "/hrissan.png",
       "image": "image1.webp",
-      "avatar": "/iconcohete.png",
+      "avatar": "/public/avatar.png",
       "email": "mailto:hrissan@gmail.com",
-      "urlLinkedin": "",
-      "urlInstagram": "",
+      "urlLinkedin": "https://www.linkedin.com/company/hrissan/posts/?feedView=all",
+      "urlInstagram": "https://www.instagram.com/_hrissan/",
       "newsletter":"",
       "urlYoutube":"https://www.youtube.com/@HRissan_"
     }

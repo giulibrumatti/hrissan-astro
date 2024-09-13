@@ -1,163 +1,174 @@
 ---
-import Container from "./Container.astro";
-import FooterNav from "./footer/FooterNav.astro";
-import GroupFooterNav from "./footer/GroupFooterNav.astro";
+import Container from "./elements/Container.astro";
+import FooterNav from "./elements/FooterNav.astro";
+import GroupFooterNav from "./elements/GroupFooterNav.astro";
 import Instragram from "./icons/Instragram.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 import Mail from "./icons/Mail.astro";
 import YouTube from "./icons/YouTube.astro";
-import Paragraph from "./Paragraph.astro";
+import Paragraph from "./elements/Paragraph.astro";
+
+import { basics } from "datos.json";
+const { urlLinkedin, urlInstagram, urlYoutube, email } = basics;
+
 const footerNav1 = [
-    {
-        itemText:"Perfil G",
-        itemLink:"#"
-    },
-    {
-        itemText:"Perfil B",
-        itemLink:"#"
-    },
-    {
-        itemText:"Newsletter HRissan",
-        itemLink:"#"
-    },
-    {
-        itemText:"Newsletter G",
-        itemLink:"#"
-    }
-]
+  {
+    itemText: "Perfil G",
+    itemLink: "#",
+  },
+  {
+    itemText: "Perfil B",
+    itemLink: "#",
+  },
+  {
+    itemText: "Newsletter HRissan",
+    itemLink: "#",
+  },
+  {
+    itemText: "Newsletter G",
+    itemLink: "#",
+  },
+];
 
 const footerNav2 = [
-    {
-        itemText:"Blog",
-        itemLink:"#"
-    },
-    {
-        itemText:"Streaming",
-        itemLink:"#"
-    }
-]
+  {
+    itemText: "Blog",
+    itemLink: "#",
+  },
+  {
+    itemText: "Streaming",
+    itemLink: "#",
+  },
+];
 
 const footerCompany = [
-    {
-        itemText:"Inicio",
-        itemLink:"/about"
-    },
-    {
-        itemText:"Presentación",
-        itemLink:"#"
-    },
-    {
-        itemText:"Contacto",
-        itemLink:"#"
-    },
-]
+  {
+    itemText: "Inicio",
+    itemLink: "/about",
+  },
+  {
+    itemText: "Presentación",
+    itemLink: "#",
+  },
+  {
+    itemText: "Contacto",
+    itemLink: "#",
+  },
+];
 const footerNav3 = [
-    {
-        itemText:"Buenos Aires,",
-        itemLink:"/#"
-    },
-    {
-        itemText:"Argentina",
-        itemLink:"#"
-    },
-]
+  {
+    itemText: "Buenos Aires,",
+    itemLink: "/#",
+  },
+  {
+    itemText: "Argentina",
+    itemLink: "#",
+  },
+];
 ---
+
 <div class="mt-16"></div>
-<footer class="relative  bg-gradient-to-tr from-gray-900 pt-28 rounded-t-3xl">
-    <div class="absolute right-0 top-0 h-full w-full flex justify-end">
-        <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
-            <span
-              class="absolute w-16 h-16 -top-1 -right-1 bg-red-500 rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
-            ></span>
-          </div>
-      </div>
-
-      <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
-        <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
-            <span
-              class="absolute w-16 h-16 -top-1 -right-1 bg-red-500 rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
-            ></span>
-          </div>
-      </div>
-    <Container className="pb-8 relative overflow-auto">
-        
-        <span class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 blur-2xl opacity-20 w-24 h-16 sm:w-48 sm:h-36 rounded-full rotate-12 skew-x-6 bg-primary"></span>
-        <div class="grid grid-cols-2 lg:grid-cols-3 lg:items-stretch gap-8 relative">
-            <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
-                <div class="h-full">
-                    <a href="#" class="relative flex items-center gap-3">
-                          <img src="/public/logo2.png" alt="logo" class="max-h-10">
-                        <div class="inline-flex text-3xl font-semibold text-heading-1">
-                          <span class="underline font-tourney font-bold">HR</span><span class="text-red-400 font-tourney font-normal">ISSAN</span>
-                        </div>
-                    </a>
-                    <Paragraph className={"mt-8"}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, maiores nam doloribus id magni
-                    </Paragraph>
-                </div>
-
-                <!-- social links -->
-                <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
-                    <a href="#" class="transition hover:text-heading-1 hover:scale-105">
-                      <LinkedIn>
-                        <span class="sr-only">social link</span>
-                      </LinkedIn>
-                    </a>
-
-                    <a href="#" class="transition hover:text-heading-1 hover:scale-105">
-                      <Instragram>
-                        <span class="sr-only">social link</span>
-                      </Instragram>
-                    </a>
-
-                    <a href="#" class="transition hover:text-heading-1 hover:scale-105">
-                      <Mail>
-                        <span class="sr-only">social link</span>
-                      </Mail>
-                    </a>
-
-                    <a href="#" class="transition hover:text-heading-1 hover:scale-105">
-                      <YouTube>
-                        <span class="sr-only">social link</span>
-                      </YouTube>
-                    </a>
-                </div>
-            </div>
-
-            <GroupFooterNav>
-                <FooterNav title={"Compañía"} navItems={footerCompany}/>
-                <FooterNav title={"Nosotros"} navItems={footerNav1}/>
-            </GroupFooterNav>
-
-            <GroupFooterNav>
-                <FooterNav title={"Contenido"} navItems={footerNav2}/>
-                <FooterNav title={"Ubicación"} navItems={footerNav3}/>
-            </GroupFooterNav>
-
-        </div>
-    </Container>
-    <div class=" bg-gradient-to-tl from-box-bg py-2 relative">
-        <Container>
-            <div class="flex justify-between items-center gap-6 md:text-lg text-heading-3">
-                <div>
-                    &copy; <span id="year"></span> HRissan. All right reserved
-                </div>
-                <div>
-                    Proudly made by <a href="https://github.com/johnkat-mj" target="_blank" class="font-semibold">G. Brumatti</a>
-                </div>
-            </div>
-        </Container>
+<footer class="relative bg-gradient-to-tr from-gray-900 pt-28 rounded-t-3xl">
+  <div class="absolute right-0 top-0 h-full w-full flex justify-end">
+    <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
+      <span
+        class="absolute w-16 h-16 -top-1 -right-1 bg-red-500 rounded-md rotate-45"
+      ></span>
+      <span
+        class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+      ></span>
+      <span
+        class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+      ></span>
     </div>
+  </div>
+
+  <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
+    <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
+      <span
+        class="absolute w-16 h-16 -top-1 -right-1 bg-red-500 rounded-md rotate-45"
+      ></span>
+      <span
+        class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+      ></span>
+      <span
+        class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+      ></span>
+    </div>
+  </div>
+  <Container className="pb-8 relative overflow-auto">
+    <span
+      class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 blur-2xl opacity-20 w-24 h-16 sm:w-48 sm:h-36 rounded-full rotate-12 skew-x-6 bg-primary"
+    ></span>
+    <div
+      class="grid grid-cols-2 lg:grid-cols-3 lg:items-stretch gap-8 relative"
+    >
+      <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
+        <div class="h-full">
+          <a href="#" class="relative flex items-center gap-3">
+            <img src="/public/logo2.png" alt="logo" class="max-h-10" />
+            <div class="inline-flex text-3xl font-semibold text-heading-1">
+              <span class="underline font-tourney font-bold">HR</span><span
+                class="text-red-400 font-tourney font-normal">ISSAN</span
+              >
+            </div>
+          </a>
+          <Paragraph className={"mt-8"}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+            maiores nam doloribus id magni
+          </Paragraph>
+        </div>
+        <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
+          <a href={urlLinkedin} target="_blank" class="transition hover:text-heading-1 hover:scale-105">
+            <LinkedIn>
+              <span class="sr-only">LinkedIn</span>
+            </LinkedIn>
+          </a>
+          <a href={urlInstagram} target="_blank" class="transition hover:text-heading-1 hover:scale-105">
+            <Instragram>
+              <span class="sr-only">Instagram</span>
+            </Instragram>
+          </a>
+          <a href={urlYoutube} target="_blank" class="transition hover:text-heading-1 hover:scale-105">
+            <YouTube>
+              <span class="sr-only">YouTube</span>
+            </YouTube>
+          </a>
+          <a href={email} target="_blank" class="transition hover:text-heading-1 hover:scale-105">
+            <Mail>
+              <span class="sr-only">Mail</span>
+            </Mail>
+          </a>
+        </div>
+      </div>
+
+      <GroupFooterNav>
+        <FooterNav title={"Compañía"} navItems={footerCompany} />
+        <FooterNav title={"Nosotros"} navItems={footerNav1} />
+      </GroupFooterNav>
+
+      <GroupFooterNav>
+        <FooterNav title={"Contenido"} navItems={footerNav2} />
+        <FooterNav title={"Ubicación"} navItems={footerNav3} />
+      </GroupFooterNav>
+    </div>
+  </Container>
+  <div class="bg-gradient-to-tl from-box-bg py-2 relative">
+    <Container>
+      <div
+        class="flex justify-between items-center gap-6 md:text-lg text-heading-3"
+      >
+        <div>
+          &copy; <span id="year"></span> HRissan. All right reserved
+        </div>
+        <div>
+          Proudly made by <a
+            href="https://github.com/johnkat-mj"
+            target="_blank"
+            class="font-semibold">G. Brumatti</a
+          >
+        </div>
+      </div>
+    </Container>
+  </div>
 </footer>
