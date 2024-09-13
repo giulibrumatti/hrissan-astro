@@ -1,10 +1,10 @@
 ---
-import Container from "../components/Container.astro";
-import  Navitem from "../components/Navitem.astro";
+import '@fontsource-variable/tourney';
 import { basics } from "datos.json";
+import Container from "../components/Container.astro";
+import Navitem from "../components/Navitem.astro";
 import Button from "./Button.astro";
 const { email } = basics
-import '@fontsource-variable/tourney';
 const navItems = [
     {
         href:"#",
@@ -12,11 +12,15 @@ const navItems = [
     },
     {
         href:"#about-us",
-        text:"Nosotros"
+        text:"Presentación"
     },
     {
         href:"#",
-        text:"Streaming"
+        text:"Videos"
+    },
+    {
+        href:"#",
+        text:"Blog"
     },
 ]
 ---
@@ -27,7 +31,8 @@ const navItems = [
             <!-- logo -->
             <div class="min-w-max inline-flex relative">
                 <a href="/" class="relative flex items-center gap-3">
-                    <div class="inline-flex text-2xl font-semibold text-heading-1">
+                    <img src="/public/logo2.png" alt="logo" class="max-h-10">
+                    <div class="inline-flex text-3xl font-semibold text-heading-1">
                         <span class="underline font-tourney font-bold">HR</span><span class="text-red-400 font-tourney font-normal">ISSAN</span>
                     </div>
                 </a>
@@ -42,7 +47,7 @@ const navItems = [
                 </ul>
 
                 <div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
-                    <Button text="Tienda" href={email} className="flex justify-center w-full sm:w-max" variant="primary"/>
+                    <Button text="Login" href={email} className="flex justify-center w-full sm:w-max" variant="primary"/>
                 </div>
             </div>
             <div class="min-w-max flex items-center gap-x-3"> 
