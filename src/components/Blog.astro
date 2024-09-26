@@ -1,9 +1,9 @@
 ---
-import ContainerBlog from "./elements/ContainerBlog.astro";
+import { blog } from "datos.json";
 import Container from "./elements/Container.astro";
+import ContainerBlog from "./elements/ContainerBlog.astro";
 import Paragraph from "./elements/Paragraph.astro";
 import Title from "./elements/Title.astro";
-import { blog } from "datos.json";
 
 
 type ServicesProps = {
@@ -11,7 +11,6 @@ type ServicesProps = {
     description: string;
     icon: string
 };
-
 
 ---
 

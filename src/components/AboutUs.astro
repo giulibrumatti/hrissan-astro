@@ -1,6 +1,7 @@
 ---
-import Info from "./elements/Info.astro";
+import { basics } from "datos.json";
 import Container from "./elements/Container.astro";
+import Info from "./elements/Info.astro";
 import Paragraph from "./elements/Paragraph.astro";
 import Title from "./elements/Title.astro";
 ---
@@ -24,12 +25,13 @@ import Title from "./elements/Title.astro";
           class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-red-200 opacity-40 blur-2xl left-0 bottom-0"
         ></span>
         <img
-          src={"/images/dev-with-c-1.webp"}
-          alt="banner image"
+          src={basics.imageGB}
+          alt="Foto de Perfil de Guido y Brian"
           width="1240"
           height="1385"
           class="w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full"
         />
+        <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-transparent via-transparent to-transparent"></div>
       </div>
     </div>
     <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
@@ -151,8 +153,8 @@ import Title from "./elements/Title.astro";
           class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-red-200 opacity-40 blur-2xl left-0 bottom-0"
         ></span>
         <img
-          src={"/images/dev-with-c.webp"}
-          alt="banner image"
+          src={basics.imageBrian}
+          alt="Foto de Perfil de Brian"
           width="1240"
           height="1385"
           class="w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full"
