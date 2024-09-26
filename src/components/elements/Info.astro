@@ -4,15 +4,20 @@ import Paragraph from '../elements/Paragraph.astro';
 export interface Props{
     title:string,
     description:string
+    urlLinkedin:string
 }
-const { title, description } = Astro.props
+const { title, description, urlLinkedin} = Astro.props
 ---
 <div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
     <div class="rounded-xl bg-gray-950 p-3 text-heading-1 w-max relative">
         <slot name="icon"/>
     </div>
-    <h2 class="md:text-xl font-semibold text-heading-2 mt-6 mb-4"> {title} </h2>
-    <Paragraph>
-        {description}
-    </Paragraph>
+    <a href={urlLinkedin} target="_blank">
+        <h2 class="md:text-xl font-semibold text-heading-2 mt-6 mb-4"> {title} </h2>
+    </a>
+    <a href={urlLinkedin} target="_blank">
+        <Paragraph>
+            {description}
+        </Paragraph>
+    </a>
 </div>
