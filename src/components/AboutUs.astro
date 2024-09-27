@@ -8,6 +8,9 @@ import LinkedIn from "./icons/LinkedIn.astro";
 ---
 
 <section id="about-us">
+  <div class="text-center max-w-3xl mx-auto space-y-4 mb-4">
+    <Title className="sm:text-3xl md:text-5xl"> ¿Quiénes somos? </Title>
+  </div>
   <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12">
     <div
       class="max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto"
@@ -25,6 +28,7 @@ import LinkedIn from "./icons/LinkedIn.astro";
         <span
           class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-red-200 opacity-40 blur-2xl left-0 bottom-0"
         ></span>
+        
         <img
           src={basics.imageGB}
           alt="Foto de Perfil de Guido y Brian"
@@ -39,7 +43,7 @@ import LinkedIn from "./icons/LinkedIn.astro";
       </div>
     </div>
     <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
-      <Title className="sm:text-3xl md:text-5xl">¿Quiénes somos?</Title>
+      
       <Paragraph className="mt-8 text-lg">
         Somos <b class="text-red-400">Guido y Brian,</b> dos amigos apasionados por
         <b class="text-red-400">HR, la tecnología y los datos</b>. Estamos
