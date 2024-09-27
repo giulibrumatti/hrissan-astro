@@ -1,0 +1,60 @@
+---
+import Paragraph from './elements/Paragraph.astro'
+interface Props {
+  title: string
+  url: string
+  image: string
+  description: string
+  date: string
+
+}
+
+const { title, description, url, date, image } = Astro.props
+---
+
+<article class="post-card mb-12 sm:mb-16">
+    <header class="post-card-header">
+        <div class="mb-2 text-sm tracking-wider text-slate-500">
+            <time class="text-gray-400">{date}</time>
+        </div>
+        <h2 class="text-3xl font-bold text-heading-3"><a href={url} target="_blank">{title}</a></h2>
+    </header>
+    {
+        image && (
+            <figure class="post-card-thumbnail mt-6 mb-6 xl:mb-0">
+                <a href={image}>
+                    <img class="w-full rounded-md" src={image} loading="lazy" decoding="async" alt="" />
+                </a>
+            </figure>
+        )
+    }
+    {
+        description && (
+            <div class="post-card-content mt-4">
+                <Paragraph className="prose prose-slate max-w-none sm:prose-lg">{description}</Paragraph>
+            </div>
+        )
+    }
+</article>
+
+<style>
+    @media (min-width: 1280px) {
+        .post-card-header {
+            grid-area: header;
+        }
+        .post-card-content {
+            grid-area: content;
+        }
+        .post-card-thumbnail {
+            grid-area: thumbnail;
+        }
+        .post-card {
+            @apply grid gap-x-8;
+            grid-template-rows: min-content 1fr;
+            grid-template-columns: 1fr 768px 1fr;
+            grid-template-areas:
+                'thumbnail header'
+                'thumbnail content';
+        }
+    }
+</style>
