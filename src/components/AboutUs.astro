@@ -32,50 +32,82 @@ import LinkedIn from "./icons/LinkedIn.astro";
           height="1385"
           class="w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full"
         />
-        <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-transparent via-transparent to-transparent"></div>
+        <div
+          class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-transparent via-transparent to-transparent"
+        >
+        </div>
       </div>
     </div>
     <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
-      <Title>¿Quiénes somos?</Title>
-      <Paragraph className="mt-8">
-        Somos <b class="text-red-400">Guido y Brian,</b> dos amigos apasionados por <b class="text-red-400">HR, la tecnología y los datos</b>.
-        Estamos convencidos que el futuro (¡ya presente!) de HR tiene mucho potencial y por eso
-        decidimos crear <strong><span class="underline">HR</span><span class="text-red-400">issan</span></strong> para acompañar este cambio.
+      <Title className="sm:text-3xl md:text-5xl">¿Quiénes somos?</Title>
+      <Paragraph className="mt-8 text-lg">
+        Somos <b class="text-red-400">Guido y Brian,</b> dos amigos apasionados por
+        <b class="text-red-400">HR, la tecnología y los datos</b>. Estamos
+        convencidos que el futuro (¡ya presente!) de HR tiene mucho potencial y
+        por eso decidimos crear <strong
+          ><span class="underline">HR</span><span class="text-red-400"
+            >issan</span
+          ></strong
+        > para acompañar este cambio.
       </Paragraph>
-      <Paragraph className="mt-8 text-center"><b>¿Te sumas a nuestro viaje? </b>🧑‍🚀</Paragraph>
+      <Paragraph className="mt-8 text-center text-lg"
+        ><b>¿Te sumas a nuestro viaje? </b>🧑‍🚀</Paragraph
+      >
       <div
         class="pt-8 grid grid-cols-2 items-center gap-4 max-w-3xl md:max-w-[none]"
       >
-      <Info
-      description="Visita mi perfil de LinkedIn"
-      title="Guido Risso"
-      urlLinkedin={basics.urlLinGuido}
-    >
-      <span slot="icon">
-        <LinkedIn></LinkedIn>
-      </span>
-    </Info>
-    <Info
-    description="Visita mi perfil de LinkedIn"
-    title="Brian Andersen"
-    urlLinkedin={basics.urlLinBrian}
-  >
-    <span slot="icon">
-      <LinkedIn></LinkedIn>
-    </span>
-  </Info>
+        <Info
+          description="Visita mi perfil de LinkedIn"
+          title="Guido Risso"
+          urlLinkedin={basics.urlLinGuido}
+        >
+          <span slot="icon">
+            <a href={basics.urlLinGuido} target="_blank" class="transition hover:text-heading-1 hover:scale-105">
+              <LinkedIn></LinkedIn>
+            </a>
+          </span>
+        </Info>
+        <Info
+          description="Visita mi perfil de LinkedIn"
+          title="Brian Andersen"
+          urlLinkedin={basics.urlLinBrian}
+        >
+          <span slot="icon">
+            <a href={basics.urlLinBrian} target="_blank" class="transition hover:text-heading-1 hover:scale-105">
+              <LinkedIn></LinkedIn>
+            </a>
+          </span>
+        </Info>
       </div>
     </div>
   </Container>
   <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12 mt-8">
     <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
-      <Title>Un poco sobre nuestros objetivos...</Title>
-      <Paragraph className="mt-8">
-        Queremos crear una <b class="text-red-400">nueva forma de aprendizaje,</b> donde profesionales de HR sepan usar y promover la <b class="text-red-400">tecnología 
-          optimizando procesos y automatizando tareas.</b>
+      <Title className="sm:text-2xl md:text-4xl"
+        >Nuestro principal objetivo...</Title
+      >
+      <Paragraph className="mt-8 md:text-xl">
+        Queremos crear una <b class="text-red-400"
+          >nueva forma de aprendizaje,</b
+        > donde profesionales de HR sepan usar y promover:
       </Paragraph>
-      <Paragraph className="mt-2">
-        Aprendiendo a través de cápsulas de alto impacto, mayoritariamente prácticas, gemificadas y fácil de trasladar a tu día a día.
+      <ul class="mt-8 space-y-4 text-heading-3 font-medium">
+        <li>
+          <span
+            class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
+            >&checkmark;</span
+          > <b class="md:text-xl">La tecnología optimizando procesos.</b>
+        </li>
+        <li>
+          <span
+            class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
+            >&checkmark;</span
+          > <b class="md:text-xl">Automatizando tareas.</b>
+        </li>
+      </ul>
+      <Paragraph className="mt-6 md:text-xl">
+        Aprendiendo a través de cápsulas de alto impacto, mayoritariamente
+        prácticas, gemificadas y fácil de trasladar a tu día a día.
       </Paragraph>
     </div>
 
