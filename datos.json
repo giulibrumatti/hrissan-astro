@@ -14,6 +14,70 @@
     "newsletter": "",
     "urlYoutube": "https://www.youtube.com/@HRissan_"
   },
+  "mainbasics": [
+      {
+        "name": "Home",
+        "url": "/"
+      }
+    ],
+    "main": [
+      {
+        "name": "Servicio",
+        "menu": [
+          {
+            "text": "HR Evolution Program",
+            "url": "/"
+          },
+          {
+            "text": "HR Tech: The Game",
+            "url": "#"
+          },
+          {
+            "text": "Consultoría",
+            "url": "#"
+          },
+          {
+            "text": "Mentorías TBC",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "name": "Recursos",
+        "menu": [
+          {
+            "text": "Tableros en Excel",
+            "url": "#"
+          },
+          {
+            "text": "Tableros de Power BI",
+            "url": "#"
+          },
+          {
+            "text": "Ebook",
+            "url": "/"
+          }
+        ]
+      },
+      {
+        "name": "Contenido",
+        "menu": [
+          {
+            "text": "Artículos",
+            "url": "/"
+          },
+          {
+            "text": "Webinars, Streaming & Talks",
+            "url": "/"
+          },
+          {
+            "text": "Videos de Youtube",
+            "url": "/"
+          }
+        ]
+      }
+    ],
+
   "blog": [
     {
       "date": "11 de Septiembre de 2024",
