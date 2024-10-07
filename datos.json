@@ -14,16 +14,14 @@
     "newsletter": "",
     "urlYoutube": "https://www.youtube.com/@HRissan_"
   },
-  "mainbasics": [
+  "main": [
       {
         "name": "Home",
         "url": "/"
-      }
-    ],
-    "main": [
+      },
       {
         "name": "Servicio",
-        "menu": [
+        "submain": [
           {
             "text": "HR Evolution Program",
             "url": "/"
@@ -44,7 +42,7 @@
       },
       {
         "name": "Recursos",
-        "menu": [
+        "submain": [
           {
             "text": "Tableros en Excel",
             "url": "#"
@@ -61,7 +59,7 @@
       },
       {
         "name": "Contenido",
-        "menu": [
+        "submain": [
           {
             "text": "Artículos",
             "url": "/"

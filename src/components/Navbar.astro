@@ -1,50 +1,105 @@
 ---
-import { basics } from "datos.json";
+import { main, basics } from "datos.json";
 import Container from "../components/elements/Container.astro";
 import Navitem from "../components/elements/Navitem.astro";
-
-const navItems = [
-    {
-        href:"#",
-        text:"Home"
-    },
-    {
-        href:"#services",
-        text:"Services"
-    },
-    {
-        href:"#about-us",
-        text:"About us"
-    },
-    {
-        href:"#features",
-        text:"Features"
-    },
-]
+import Paragraph from "./elements/Paragraph.astro";
 ---
 
-<header class="absolute inset-x-0 top-0 z-50 py-6">
-    <Container>
-        <nav class="w-full flex justify-between gap-6 relative">
-            <!-- logo -->
-            <div class="min-w-max inline-flex relative">
-                <a href="/" class="relative flex items-center gap-3">
-                    <div class="inline-flex text-lg font-semibold text-heading-1">
-                        <img src={basics.logo} alt="" width="200px">
-                    </div>
+<header data-spy="scroll" class="fixed top-0 inset-x-0 z-50 py-6 bg-gradient-to-tr">
+  <Container>
+    <nav class="w-full flex justify-between gap-4 relative">
+      <!-- logo -->
+      <div class="min-w-max inline-flex relative">
+        <a href="/" class="relative flex items-center gap-3">
+          <div class="inline-flex text-lg font-semibold text-heading-1">
+            <img src={basics.logo} alt="" width="200px" />
+          </div>
+        </a>
+      </div>
+
+      <div
+        data-nav-overlay
+        aria-hidden="true"
+        class="fixed hidden inset-0 lg:!hidden bg-box-bg bg-opacity-50 backdrop-filter backdrop-blur-xl"
+      >
+      </div>
+
+      <div data-nav-overlay aria-hidden="true" class="fixed hidden inset-0 lg:!hidden bg-box-bg bg-opacity-50 backdrop-filter backdrop-blur-xl"></div>
+        <ul
+          class="border-t border-box-border lg:border-t-0 px-6 lg:px-0 pt-6 lg:pt-0 flex flex-col lg:flex-row gap-y-4 gap-x-3 text-lg text-heading-2 w-full lg:justify-center lg:items-center"
+        >
+          {
+            main.map((item) => (
+              <li class="relative group mr-10">
+                <a
+                  href={item.url ? item.url : "#"}
+                  class="duration-500 font-medium ease-linear hover:text-primary inline-flex items-center"
+                >
+                  <Paragraph className="text-lg font-bold">
+                    {item.name}
+                  </Paragraph>
+                  {/* Dropdown icon */}
+                  {item.submain && (
+                    <svg
+                      class="ml-2 h-5 w-5 text-gray-400 transition-transform transform group-hover:rotate-180"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  )}
                 </a>
-            </div>
 
-            <div data-nav-overlay aria-hidden="true" class="fixed hidden inset-0 lg:!hidden bg-box-bg bg-opacity-50 backdrop-filter backdrop-blur-xl"></div>
-            <div data-navbar class="flex h-0 overflow-hidden lg:!h-auto lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full lg:top-0 bg-body lg:bg-transparent border-x border-x-box-border lg:border-x-0">
-                <ul class="border-t border-box-border lg:border-t-0 px-6 lg:px-0 pt-6 lg:pt-0 flex flex-col lg:flex-row gap-y-4 gap-x-3 text-lg text-heading-2 w-full lg:justify-center lg:items-center">
-                    {navItems.map(item=>{
-                        return <Navitem {...item}/>
-                    })
-                    }
-                </ul>
-
-            </div>
-        </nav>
-    </Container>
+                {/* Submenu */}
+                {item.submain && (
+                  <ul class="absolute bg-box-bg bg-opacity-50 left-0 top-full hidden group-hover:block shadow-lg rounded-lg min-w-[200px] transition-all duration-800 ease-out transform opacity-0 group-hover:opacity-100 group-hover:translate-y-1">
+                    {item.submain.map((subItem) => (
+                      <li>
+                        <a href={subItem.url} class="block px-4 py-2">
+                          <Paragraph className="hover:text-primary text-base font-bold">
+                            {subItem.text}
+                          </Paragraph>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))
+          }
+        </ul>
+        <div class="min-w-max flex items-center gap-x-3">
+            
+            <button data-toggle-nav data-open-nav="false" class="lg:hidden lg:invisible outline-none w-7 h-auto flex flex-col relative">
+                <span id="line1" class="w-6 h-0.5 rounded-full bg-heading-2 transition-all duration-300 ease-linear"></span> 
+                <span id="line2" class="w-6 origin-center  mt-1 h-0.5 rounded-ful bg-heading-2 transition-all duration-300 ease-linear"></span> 
+                <span id="line3" class="w-6 mt-1 h-0.5 rounded-ful bg-heading-2 transition-all duration-300 ease-linear"></span>                         
+                <span class="sr-only">togglenav</span>
+            </button>
+        </div>
+      </div>
+    </nav>
+  </Container>
 </header>
+
+<script>
+    window.addEventListener("scroll", function() {
+      const nav = document.querySelector("nav");
+      if (nav) {
+        nav.classList.toggle("abajo", window.scrollY > 0);
+      }
+    });
+  </script>
+
+  <style>
+    nav.abajo {
+  background-color: rgba(10, 9, 9, 0.5); /* fondo semi-transparente */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* sombra para efecto de profundidad */
+  border-radius: 5px;
+}
+  </style>
