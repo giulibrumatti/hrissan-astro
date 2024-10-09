@@ -1,126 +1,102 @@
 ---
-import { main, basics } from "datos.json";
-import Paragraph from "./elements/Paragraph.astro";
-import Container from "./elements/Container.astro";
+import { main } from "datos.json";
 ---
 
 <header
-    class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
-    <nav
-        class="flex px-3 text-sm font-medium rounded-full text-heading-2 justify-center items-center"
-    >
-    <ul
-    class="flex border-t border-box-border flex-row gap-y-4 gap-x-3 text-lg text-heading-2 w-full justify-center items-center"
-    id="navbar"
+  <nav
+    class="flex px-3 text-sm font-bold rounded-full text-gray-200 justify-center items-center"
   >
     {
-      main.map((item) => (
-        <li class="relative group">
+      main.map((menu) => (
+        <div class="relative group md:p-2 p-0">
           <a
-            href={item.url ? item.url : "#"}
-            class="duration-500 font-medium ease-linear hover:text-primary inline-flex items-center"
+            class="relative block px-2 py-2 transition hover:text-red-400"
+            aria-label={menu.name}
+            href={menu.url}
           >
-            <Paragraph className="text-lg font-bold">{item.name}</Paragraph>
-            {/* Dropdown icon */}
-            {item.submain && (
-              <svg
-                class="ml-2 h-5 w-5 text-gray-400 transition-transform transform group-hover:rotate-180"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            )}
+            {menu.name}
           </a>
-  
-          {/* Submenu */}
-          {item.submain && (
-            <ul class="absolute bg-box-bg bg-opacity-50 left-0 top-full hidden group-hover:block shadow-lg rounded-lg min-w-[200px] transition-all duration-800 ease-out transform opacity-0 group-hover:opacity-100 group-hover:translate-y-1">
-              {item.submain.map((subItem) => (
+          {menu.submain && menu.submain.length > 0 && (
+            <ul class="absolute left-0 hidden mt-1 rounded-md shadow-lg group-hover:block">
+              {menu.submain.map((subMenu) => (
                 <li>
-                  <a href={subItem.url} class="block px-4 py-2">
-                    <Paragraph className="hover:text-primary text-base font-bold">
-                      {subItem.text}
-                    </Paragraph>
+                  <a
+                    class="block px-4 py-2 rounded text-gray-200 bg-gray-950 hover:bg-gray-700 hover:text-primary"
+                    href={subMenu.url}
+                  >
+                    {subMenu.text}
                   </a>
                 </li>
               ))}
             </ul>
           )}
-        </li>
+        </div>
       ))
     }
-  </ul>
-    </nav>
+  </nav>
 </header>
 
 <script>
-    document.addEventListener("astro:page-load", () => {
-        const sections = document.querySelectorAll("section");
-        const navItems = document.querySelectorAll("header nav a");
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
 
-        const callback = (entries: any[]) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    navItems.forEach((item) => {
-                        if (
-                            item.getAttribute("aria-label") == entry.target.id
-                        ) {
-                            item.classList.add("text-blue-500");
-                        } else {
-                            item.classList.remove("text-blue-500");
-                        }
-                    });
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(callback, {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.3,
-        });
-
-        sections.forEach((section) => {
-            observer.observe(section);
-        });
-
-        // Cleanup function
-        document.onvisibilitychange = () => {
-            if (document.visibilityState === "hidden") {
-                observer.disconnect();
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") == entry.target.id) {
+              item.classList.add("text-blue-500");
             } else {
-                sections.forEach((section) => {
-                    observer.observe(section);
-                });
+              item.classList.remove("text-blue-500");
             }
-        };
+          });
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
     });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect();
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      }
+    };
+  });
 </script>
 
 <style>
-    nav {
-        animation: nav-shadown 1s linear both;
-        animation-timeline: scroll();
-        animation-range: 0 100px;
-    }
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
 
-    nav {
-        @apply bg-gray-800/90;
-    }
+  nav {
+    @apply bg-gray-800/90;
+  }
 
-    @keyframes nav-shadown {
-        0% {
-            @apply bg-gray-800/0;
-        }
-        to {
-            @apply shadow-lg ring-1 backdrop-blur ring-white/10;
-        }
+  @keyframes nav-shadown {
+    0% {
+      @apply bg-gray-800/0;
     }
+    to {
+      @apply shadow-lg ring-1 backdrop-blur ring-white/10;
+    }
+  }
 </style>

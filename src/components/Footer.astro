@@ -9,7 +9,7 @@ import YouTube from "./icons/YouTube.astro";
 import Paragraph from "./elements/Paragraph.astro";
 
 import { basics } from "datos.json";
-const { urlLinkedin, urlInstagram, urlYoutube, email, avatar } = basics;
+const { urlLinkedin, urlInstagram, urlYoutube, email, logo } = basics;
 
 const footerNav1 = [
   {
@@ -67,7 +67,7 @@ const footerNav3 = [
 ];
 ---
 
-<div class="mt-16"></div>
+<div class="mt-8"></div>
 <footer class="relative bg-gradient-to-tr from-gray-900 pt-28 rounded-t-3xl">
   <div class="absolute right-0 top-0 h-full w-full flex justify-end">
     <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
@@ -106,16 +106,14 @@ const footerNav3 = [
       <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
         <div class="h-full">
           <a href="#" class="relative flex items-center gap-3">
-            <img src={avatar} alt="logo" class="max-h-10" />
-            <div class="inline-flex text-3xl font-semibold text-heading-1">
-              <span class="underline font-tourney font-bold">HR</span><span
-                class="text-red-400 font-tourney font-normal">ISSAN</span
-              >
-            </div>
+            <img src={logo} alt="logo" class="max-h-20" />
           </a>
-          <Paragraph className={"mt-8"}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-            maiores nam doloribus id magni
+          <Paragraph className={"mt-2"}>
+            La tecnología está transformando HR: no sólo facilitando
+            procesos, sino también creando nuevas oportunidades para la
+            gestión del talento y la cultura organizacional. Te ayudamos a
+            llevar HR al siguiente nivel a través del uso de la tecnología y
+            los datos.
           </Paragraph>
         </div>
         <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">

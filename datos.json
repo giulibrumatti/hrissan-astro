@@ -16,7 +16,7 @@
   },
   "main": [
       {
-        "name": "Home",
+        "name": "Inicio",
         "url": "/"
       },
       {
@@ -24,7 +24,7 @@
         "submain": [
           {
             "text": "HR Evolution Program",
-            "url": "/"
+            "url": "#"
           },
           {
             "text": "HR Tech: The Game",
@@ -53,7 +53,7 @@
           },
           {
             "text": "Ebook",
-            "url": "/"
+            "url": "#"
           }
         ]
       },
@@ -62,15 +62,15 @@
         "submain": [
           {
             "text": "Artículos",
-            "url": "/"
+            "url": "#"
           },
           {
             "text": "Webinars, Streaming & Talks",
-            "url": "/"
+            "url": "#"
           },
           {
             "text": "Videos de Youtube",
-            "url": "/"
+            "url": "#"
           }
         ]
       }
