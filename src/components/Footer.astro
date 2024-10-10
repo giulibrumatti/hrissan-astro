@@ -2,69 +2,45 @@
 import Container from "./elements/Container.astro";
 import FooterNav from "./elements/FooterNav.astro";
 import GroupFooterNav from "./elements/GroupFooterNav.astro";
+import Paragraph from "./elements/Paragraph.astro";
 import Instragram from "./icons/Instragram.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 import Mail from "./icons/Mail.astro";
 import YouTube from "./icons/YouTube.astro";
-import Paragraph from "./elements/Paragraph.astro";
 
-import { basics } from "datos.json";
+import { basics, main } from "datos.json";
 const { urlLinkedin, urlInstagram, urlYoutube, email, logo } = basics;
 
-const footerNav1 = [
-  {
-    itemText: "Perfil G",
-    itemLink: "#",
-  },
-  {
-    itemText: "Perfil B",
-    itemLink: "#",
-  },
-  {
-    itemText: "Newsletter HRissan",
-    itemLink: "#",
-  },
-  {
-    itemText: "Newsletter G",
-    itemLink: "#",
-  },
-];
+const recursosItem = main.find(item => item.name === "Recursos");
+const servicioItem = main.find(item => item.name === "Servicio");
+const contenidoItem = main.find(item => item.name === "Contenido");
 
-const footerNav2 = [
-  {
-    itemText: "Blog",
-    itemLink: "#",
-  },
-  {
-    itemText: "Streaming",
-    itemLink: "#",
-  },
-];
+const recursos = recursosItem?.submain?.map(sub => ({
+  itemText: sub.text,
+  itemLink: sub.url
+})) || [];
 
-const footerCompany = [
-  {
-    itemText: "Inicio",
-    itemLink: "/about",
-  },
-  {
-    itemText: "Presentación",
-    itemLink: "#",
-  },
-  {
-    itemText: "Contacto",
-    itemLink: "#",
-  },
-];
+const servicio = servicioItem?.submain?.map(sub => ({
+  itemText: sub.text,
+  itemLink: sub.url
+})) || [];
+
+const contenido = contenidoItem?.submain?.map(sub => ({
+  itemText: sub.text,
+  itemLink: sub.url
+})) || [];
+
 const footerNav3 = [
   {
     itemText: "Buenos Aires,",
-    itemLink: "/#",
+    itemLink: "#",
   },
   {
     itemText: "Argentina",
     itemLink: "#",
   },
 ];
+
 ---
 
 <div class="mt-8"></div>
@@ -105,7 +81,7 @@ const footerNav3 = [
     >
       <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
         <div class="h-full">
-          <a href="#" class="relative flex items-center gap-3">
+          <a href="/" class="relative flex items-center gap-3">
             <img src={logo} alt="logo" class="max-h-20" />
           </a>
           <Paragraph className={"mt-2"}>
@@ -141,12 +117,12 @@ const footerNav3 = [
       </div>
 
       <GroupFooterNav>
-        <FooterNav title={"Compañía"} navItems={footerCompany} />
-        <FooterNav title={"Nosotros"} navItems={footerNav1} />
+        <FooterNav title={"Servicio"} navItems={servicio} />
+        <FooterNav title={"Recursos"} navItems={recursos} />
       </GroupFooterNav>
 
       <GroupFooterNav>
-        <FooterNav title={"Contenido"} navItems={footerNav2} />
+        <FooterNav title={"Contenido"} navItems={contenido} />
         <FooterNav title={"Ubicación"} navItems={footerNav3} />
       </GroupFooterNav>
     </div>

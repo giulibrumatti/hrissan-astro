@@ -62,7 +62,7 @@
         "submain": [
           {
             "text": "Artículos",
-            "url": "#"
+            "url": "/articles"
           },
           {
             "text": "Webinars, Streaming & Talks",
@@ -82,6 +82,7 @@
       "title": "HR Tech: Automatiza y enfócate en lo que importa",
       "url": "https://www.linkedin.com/pulse/hr-tech-automatiza-y-enf%C3%B3cate-en-lo-que-importa-guido-risso-8trmf/",
       "image": "/portBlog6.png",
+      "pos": "0",
       "description": "Hoy quiero hablarles de algo que está transformando nuestro trabajo en HR de una forma que pocos imaginaban hace unos años: la automatización de procesos robóticos, o como nos gusta decir en el mundo tech, RPA. Estamos hablando de software que nos libera de esas tareas repetitivas y nos permite enfocarnos en lo que realmente importa."
     },
     {
@@ -89,6 +90,7 @@
       "title": "El futuro del aprendizaje: Nunca dejes de aprender",
       "url": "https://www.linkedin.com/pulse/el-futuro-del-aprendizaje-nunca-dejes-de-aprender-guido-risso-mgt1f/?trackingId=WsY6ezkrRpeNF6HszPF1Yw%3D%3D",
       "image": "/portBlog5.png",
+      "pos": "0",
       "description": "En este número, exploramos cómo la inteligencia artificial está transformando la formación profesional, desde la personalización del aprendizaje hasta el feedback instantáneo y las experiencias de gamificación que hacen que aprender sea más efectivo y divertido que nunca."
     },
     {
@@ -96,6 +98,7 @@
       "title": "Toolings: ¿Nuevas habilidades del futuro?",
       "url": "https://www.linkedin.com/pulse/toolings-nuevas-habilidades-del-futuro-guido-risso-xddof/?trackingId=kJSoLdckSwq3XUOZGyRZRw%3D%3D",
       "image": "/portBlog3.png",
+      "pos": "0",
       "description": "En este #3 artículo de mi newsletter, vengo a tratar un tema del cual vengo pensando bastante... La importancia y el impacto que tiene el conocimiento del uso de herramientas. El objetivo de este artículo es compartir mi visión sobre este tema y cómo el hecho de tener conocimientos sobre herramientas permite destacarte o mismo optimizar tu trabajo frente al resto. En mi caso, menciono algunas herramientas como Power BI, App sheet, Power Automate, Chat GPT, Gemini o mismo excel."
     },
     {
@@ -103,6 +106,7 @@
       "title": "Reinventando a nuestro EX con un toque disruptivo",
       "url": "https://www.linkedin.com/pulse/reinventando-nuestro-ex-con-un-toque-disruptivo-guido-risso-xgt4f/",
       "image": "/portBlog2.png",
+      "pos": "1",
       "description": "No te dejes llevar por el título y te invito a que sigas leyendo. En este segundo artículo voy a estar hablando de como la tecnología puede ayudarnos a transformar nuestro 𝗘𝗺𝗽𝗹𝗼𝘆𝗲𝗲 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲. Comparto algunos ejemplos y casos de compañias que ya se encuentran en este estadío de 𝗛𝗥 𝗧𝗲𝗰𝗵 teniendo a la tecnología como su principal aliada."
     },
     {
@@ -110,6 +114,7 @@
       "title": "¿Cómo mantener lo humano en un mundo tecnológico?",
       "url": "https://www.linkedin.com/pulse/c%C3%B3mo-mantener-lo-humano-en-un-mundo-tecnol%C3%B3gico-guido-risso-gifzf/",
       "image": "/portBlog1.png",
+      "pos": "1",
       "description": "Cada vez hay más tecnología para optimizar nuestras tareas o servicios por lo cuál a veces se nos olvida la importancia que tiene el toque humano por este motivo, quiero invitarte a que leas esta primera edición en donde reflexionaré sobre como hacerle frente a este contexto actual."
     }
   ]

@@ -1,0 +1,40 @@
+---
+import Container from "@/components/elements/Container.astro";
+import Post from "@/components/Post.astro";
+import { blog } from "datos.json";
+import Layout from "../layouts/Layout.astro";
+
+type ServicesProps = {
+    title: string;
+    description: string;
+    icon: string;
+};
+---
+
+<Layout title="Bienvenidos a HRissan">
+    <main
+        class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden"
+        id="articles"
+    >
+        <Container className="space-y-10 md:sapce-y-12 p-28">
+            {
+                blog?.length > 0 && (
+                    <div class="px-4 mb-12 sm:px-8 sm:mb-16 text-heading-3">
+                        <div class="max-w-3xl mx-auto mb-8 sm:mb-12">
+                            <h2 class="text-sm text-heading-3 uppercase tracking-wider after:content-[''] after:block after:w-16 after:h-px after:bg-primary after:mt-4">
+                                Todos nuestros artículos
+                            </h2>
+                        </div>
+                        <div class="max-w-3xl mx-auto xl:max-w-6xl">
+                            {blog.map((BLOG) => (
+                                <li class="">
+                                    <Post {...BLOG} />
+                                </li>
+                            ))}
+                        </div>
+                    </div>
+                )
+            }
+        </Container>
+    </main>
+</Layout>

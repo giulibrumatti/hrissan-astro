@@ -1,49 +1,50 @@
 ---
 import { blog } from "datos.json";
+import Button from "./elements/Button.astro";
 import Container from "./elements/Container.astro";
-import ContainerBlog from "./elements/ContainerBlog.astro";
-import Paragraph from "./elements/Paragraph.astro";
 import Title from "./elements/Title.astro";
-import PostPreview from "./PostPreview.astro";
+import Post from "./Post.astro";
 
 type ServicesProps = {
   title: string;
   description: string;
   icon: string;
 };
+
+const filteredData = blog.filter(item => item.pos === "0");
 ---
 
 <section id="blog">
   <Container className="space-y-10 md:sapce-y-12">
     <div class="text-center max-w-3xl mx-auto space-y-4">
-      <Title className="sm:text-3xl md:text-5xl"> Blog </Title>
+      <Title className="sm:text-3xl md:text-5xl"> Artículos </Title>
     </div>
 
-  {
-    blog?.length > 0 && (
-      <div class="px-4 mb-12 sm:px-8 sm:mb-16 text-heading-3">
-        <div class="max-w-3xl mx-auto mb-8 sm:mb-12">
-          <h2 class="text-sm text-heading-3 uppercase tracking-wider after:content-[''] after:block after:w-16 after:h-px after:bg-primary after:mt-4">
-            Últimos artículos
-          </h2>
+    {
+      blog?.length > 0 && (
+        <div class="px-4 mb-12 sm:px-8 sm:mb-16 text-heading-3">
+          <div class="max-w-3xl mx-auto mb-8 sm:mb-12">
+            <h2 class="text-sm text-heading-3 uppercase tracking-wider after:content-[''] after:block after:w-16 after:h-px after:bg-primary after:mt-4">
+              Últimos artículos
+            </h2>
+          </div>
+          <div class="max-w-3xl mx-auto xl:max-w-6xl">
+            {filteredData.map((BLOG) => (
+              <li class="">
+                <Post {...BLOG} />
+              </li>
+            ))}
+          </div>
+          <div class="max-w-3xl mx-auto pt-8 border-t border-slate-200 sm:pt-12">
+            <Button
+              text="Ver todos"
+              href="/articles"
+              className="flex justify-center w-full sm:w-max"
+              variant="primary"
+            />
+          </div>
         </div>
-        <div class="max-w-3xl mx-auto xl:max-w-6xl">
-          {blog.map((BLOG) => (
-            <li class="">
-              <PostPreview {...BLOG} />
-            </li>
-          ))}
-        </div>
-        <div class="max-w-3xl mx-auto pt-8 border-t border-slate-200 sm:pt-12">
-          <a
-            class="px-8 py-2.5 inline-flex gap-1.5 justify-center items-center font-semibold bg-primary text-white rounded-full transition duration-300 hover:shadow-button"
-            href="/blog"
-          >
-            View All Posts
-          </a>
-        </div>
-      </div>
-    )
-  }
+      )
+    }
+  </Container>
 </section>
-</Container>
