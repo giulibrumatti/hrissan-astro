@@ -1,5 +1,4 @@
 ---
-import { basics } from "datos.json";
 import Container from "./elements/Container.astro";
 import Paragraph from "./elements/Paragraph.astro";
 import Title from "./elements/Title.astro";
@@ -9,37 +8,37 @@ const features = [
     title: "Automatizar procesos de onboarding⁣",
     description:
       "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+    icon: "/automation.png",
   },
   {
     title: "Crear un chatbot desde cero⁣",
     description:
       "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+    icon: "/chatbot.png",
   },
   {
     title: "Analizar datos de manera efectiva⁣",
     description:
       "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+    icon: "/data-analytics.png",
   },
   {
     title: "Desarrollar dashboards impactantes⁣",
     description:
       "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+    icon: "/dashboard.png",
   },
   {
     title: "Incorporación de IA dentro de proceso de HR",
     description:
       "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+    icon: "/robot.png",
   },
   {
     title: "Exploraremos herramientas de vanguardia",
     description:
       "ChatGPT, Gemini, MAKE, Zapier y mucho más.⁣",
-    icon: "bx:bxs-user",
+    icon: "tools.png",
   },
 ];
 ---
@@ -67,8 +66,8 @@ const features = [
     {
       features.map((item) => (
         <div class="flex gap-4 items-start rounded-3xl border border-box-border bg-box-bg p-5 sm:p-6 lg:p-8">
-          <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-            <img class="text-white" src={item.icon} />
+          <div class="mt-1 rounded-full p-2 shrink-0" >
+            <img class="filter brightness-0 invert sepia saturate-[1000%] hue-rotate-[180deg] w-10" src={item.icon} alt="icon"/>
           </div>
           <div>
             <h3 class="font-semibold text-lg text-heading-1">{item.title}</h3>{" "}
