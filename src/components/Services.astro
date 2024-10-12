@@ -3,6 +3,9 @@ import ButtonRed from "./elements/ButtonRed.astro";
 import Container from "./elements/Container.astro";
 import Paragraph from "./elements/Paragraph.astro";
 import Title from "./elements/Title.astro";
+import Module from "./icons/Module.astro";
+import Play from "./icons/Play.astro";
+import Time from "./icons/Time.astro";
 
 const features = [
   {
@@ -37,14 +40,13 @@ const features = [
   },
   {
     title: "Exploraremos herramientas de vanguardia",
-    description:
-      "ChatGPT, Gemini, MAKE, Zapier y mucho más.⁣",
+    description: "ChatGPT, Gemini, MAKE, Zapier y mucho más.⁣",
     icon: "tools.png",
   },
 ];
 ---
 
-<Container >
+<Container>
   <div class="mt-16 md:mt-0" id="service">
     <Title className="text-4xl lg:text-5xl font-bold lg:tracking-tight">
       HR Evolution Program
@@ -58,23 +60,27 @@ const features = [
       llegado. En esta aventura viajaremos hacia el planeta de los datos, de la
       inteligencia artificial y la automatización. En 4 encuentros de 2 horas
       cada uno, revisaremos los conceptos generales y practicaremos cómo poder
-      aplicarlos y llevarlos a cabo en tu día a día ¿Te sumas a la revolución
-      de HR Tech?
+      aplicarlos y llevarlos a cabo en tu día a día ¿Te sumas a la revolución de
+      HR Tech?
     </Paragraph>
   </div>
   <div class="text-center mt-8">
-    <ButtonRed></ButtonRed>
+    <ButtonRed />
   </div>
 
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16 ">
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
     {
       features.map((item) => (
         <div class="flex gap-4 items-start rounded-3xl border border-box-border bg-box-bg p-5 sm:p-6 lg:p-8">
-          <div class="mt-1 rounded-full p-2 shrink-0" >
-            <img class="filter brightness-0 invert sepia saturate-[1000%] hue-rotate-[180deg] w-10" src={item.icon} alt="icon"/>
+          <div class="mt-1 rounded-full p-2 shrink-0">
+            <img
+              class="filter brightness-0 invert sepia saturate-[1000%] hue-rotate-[180deg] w-10"
+              src={item.icon}
+              alt="icon"
+            />
           </div>
           <div>
-            <h3 class="font-semibold text-lg text-heading-1">{item.title}</h3>{" "}
+            <h3 class="font-semibold text-lg text-heading-1">{item.title}</h3>
             <Paragraph className="mt-2 leading-relaxed">
               {item.description}
             </Paragraph>
@@ -82,5 +88,21 @@ const features = [
         </div>
       ))
     }
+  </div>
+  <div class="text-white mt-10">
+    <ul class="flex flex-col gap-4 justify-center sm:flex-row">
+      <li class="flex items-center rounded-3xl border border-box-border bg-box-bg p-2 sm:p-3 lg:p-4">
+        <Time />
+        <h3 class="font-semibold text-lg text-heading-1 ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl">8 horas de aprendizaje</h3>
+      </li>
+      <li class="flex items-center rounded-3xl border border-box-border bg-box-bg p-2 sm:p-3 lg:p-4">
+        <Module />
+        <h3 class="font-semibold text-lg text-heading-1 ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl">2 módulos</h3>
+      </li>
+      <li class="flex items-center rounded-3xl border border-box-border bg-box-bg p-2 sm:p-3 lg:p-4">
+        <Play />
+        <h3 class="font-semibold text-lg text-heading-1 ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl">4 clases</h3>
+      </li>
+    </ul>
   </div>
 </Container>
