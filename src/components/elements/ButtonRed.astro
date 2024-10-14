@@ -7,11 +7,19 @@ const bgColorClasses =
 const disableClasses = "disabled:pointer-events-none disabled:opacity-50";
 const fontSizeClasses = "2xl:text-base";
 const ringClasses = "dark:ring-zinc-200";
+export interface Props{
+    href:string,
+    text:string,
+    className?:string,
+    variant:"primary"|"secondary"
+}
+
+const {href, text,className, variant} = Astro.props
 ---
 
 <a
   class={`${baseClasses} ${borderClasses} ${bgColorClasses} ${disableClasses} ${fontSizeClasses} ${ringClasses}`}
-  href=""
+  href={href}
 >
-¡Sumate al viaje!
+{text}
 </a>
