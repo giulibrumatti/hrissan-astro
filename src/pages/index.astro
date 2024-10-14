@@ -1,17 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import AboutUs from '@/components/AboutUs.astro';
-import Blog from '@/components/Blog.astro';
-import Services from '@/components/Services.astro';
-
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import AboutUs from "@/components/AboutUs.astro";
+import Blog from "@/components/Blog.astro";
+import Services from "@/components/Services.astro";
+import ButtonRed from "@/components/elements/ButtonRed.astro";
 ---
 
 <Layout title="Bienvenidos a HRissan">
-	<main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
-		<Hero/>
-		<AboutUs/>
-		<Services></Service>
-		<Blog></Blog>
-	</main>
+  <main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+    <Hero />
+    <AboutUs />
+    <Services />
+    <div class="text-center">
+      <ButtonRed
+        text="Ver más información"
+        href="/servicesHRProgram"
+        className="flex justify-center w-full sm:w-max"
+        variant="primary"
+      />
+    </div>
+    <Blog />
+  </main>
 </Layout>
