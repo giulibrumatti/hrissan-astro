@@ -15,67 +15,97 @@
     "urlYoutube": "https://www.youtube.com/@HRissan_"
   },
   "main": [
-      {
-        "name": "Inicio",
-        "url": "/"
-      },
-      {
-        "name": "Servicio",
-        "submain": [
-          {
-            "text": "HR Evolution Program",
-            "url": "/servicesHRProgram"
-          },
-          {
-            "text": "HR Tech: The Game",
-            "url": "#"
-          },
-          {
-            "text": "Consultoría",
-            "url": "#"
-          },
-          {
-            "text": "Mentorías TBC",
-            "url": "#"
-          }
-        ]
-      },
-      {
-        "name": "Recursos",
-        "submain": [
-          {
-            "text": "Tableros en Excel",
-            "url": "#"
-          },
-          {
-            "text": "Tableros de Power BI",
-            "url": "#"
-          },
-          {
-            "text": "Ebook",
-            "url": "#"
-          }
-        ]
-      },
-      {
-        "name": "Contenido",
-        "submain": [
-          {
-            "text": "Artículos",
-            "url": "/articles"
-          },
-          {
-            "text": "Webinars, Streaming & Talks",
-            "url": "#"
-          },
-          {
-            "text": "Videos de Youtube",
-            "url": "#"
-          }
-        ]
-      }
-    ],
-
+    {
+      "name": "Inicio",
+      "url": "/"
+    },
+    {
+      "name": "Servicio",
+      "submain": [
+        {
+          "text": "HR Evolution Program",
+          "url": "/servicesHRProgram"
+        },
+        {
+          "text": "HR Tech: The Game",
+          "url": "#"
+        },
+        {
+          "text": "Consultoría",
+          "url": "#"
+        },
+        {
+          "text": "Mentorías TBC",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "name": "Recursos",
+      "submain": [
+        {
+          "text": "Tableros en Excel",
+          "url": "#"
+        },
+        {
+          "text": "Tableros de Power BI",
+          "url": "#"
+        },
+        {
+          "text": "Ebook",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "name": "Contenido",
+      "submain": [
+        {
+          "text": "Artículos",
+          "url": "/articles"
+        },
+        {
+          "text": "Webinars, Streaming & Talks",
+          "url": "#"
+        },
+        {
+          "text": "Videos de Youtube",
+          "url": "#"
+        }
+      ]
+    }
+  ],
+  "hrEvPro": [
+    {
+      "title1": "People Analytics: Transformando datos en decisiones inteligentes",
+      "content1": [
+        {
+          "subtitle": "Introducción al concepto⁣",
+          "description": "Se aborda la importancia del análisis de personas en la gestión organizacional."
+        },
+        {
+          "subtitle": "Relación de los datos con la toma de decisiones⁣",
+          "description": "El enfoque se centra en cómo construir una cultura organizacional impulsada por los datos y los beneficios que aporta."
+        },
+        {
+          "subtitle": "Tipos de análisis⁣",
+          "description": "Explicación de los diferentes tipos de análisis y métricas clave de rendimiento (KPIs) utilizados en HR."
+        },
+        {
+          "subtitle": "Importancia de la visualización de datos⁣",
+          "description": "Se subraya cómo la visualización efectiva de los datos es esencial para una comunicación clara."
+        },
+        {
+          "subtitle": "Herramientas recomendadas",
+          "description": "Se mencionan herramientas prácticas para implementar el análisis de personas en HR."
+        },
+        {
+          "subtitle": "Casos prácticos",
+          "description": "Aplicaciones del People Analytics en procesos reales de HR.⁣"
+        }
+      ]
+    }
+  ],
   "blog": [
     {
       "date": "11 de Septiembre de 2024",

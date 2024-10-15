@@ -44,6 +44,11 @@ const features = [
     icon: "tools.png",
   },
 ];
+
+export interface Props{
+    className?:string,
+}
+const {className} = Astro.props
 ---
 
 <Container>
@@ -110,4 +115,17 @@ const features = [
       </li>
     </ul>
   </div>
+  <div class="text-center mt-8">
+    <ButtonRed
+    text="Ver más información"
+    href="/servicesHRProgram"
+    className="flex justify-center w-full sm:w-max"{className}
+    variant="secondary"
+/>
+  </div>
 </Container>
+
+
+<script>
+
+</script>

@@ -1,10 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
 import AboutUs from "@/components/AboutUs.astro";
 import Blog from "@/components/Blog.astro";
 import Services from "@/components/Services.astro";
-import ButtonRed from "@/components/elements/ButtonRed.astro";
+import Hero from "../components/Hero.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Bienvenidos a HRissan">
@@ -12,14 +11,6 @@ import ButtonRed from "@/components/elements/ButtonRed.astro";
     <Hero />
     <AboutUs />
     <Services />
-    <div class="text-center">
-      <ButtonRed
-        text="Ver más información"
-        href="/servicesHRProgram"
-        className="flex justify-center w-full sm:w-max"
-        variant="primary"
-      />
-    </div>
     <Blog />
   </main>
 </Layout>
