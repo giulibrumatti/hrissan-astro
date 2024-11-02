@@ -147,31 +147,31 @@
     {
       "title": "Asincrónico",
       "description":
-        "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+        "",
       "icon": "/automation.png"
     },
     {
       "title": "10 Niveles⁣⁣",
       "description":
-        "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+        "",
       "icon": "/chatbot.png"
     },
     {
       "title": "Dificultad: Explorador⁣⁣",
       "description":
-        "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+        "",
       "icon": "/data-analytics.png"
     },
     {
       "title": "Acceso con usuario y contraseña⁣⁣",
       "description":
-        "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+        "",
       "icon": "/dashboard.png"
     }
   ],
   "blog": [
     {
-      "date": "11 de Septiembre de 2024",
+      "date": "11 de Septiembre de 2024 - Guido Risso",
       "title": "HR Tech: Automatiza y enfócate en lo que importa",
       "url": "https://www.linkedin.com/pulse/hr-tech-automatiza-y-enf%C3%B3cate-en-lo-que-importa-guido-risso-8trmf/",
       "image": "/portBlog6.png",
@@ -179,23 +179,23 @@
       "description": "Hoy quiero hablarles de algo que está transformando nuestro trabajo en HR de una forma que pocos imaginaban hace unos años: la automatización de procesos robóticos, o como nos gusta decir en el mundo tech, RPA. Estamos hablando de software que nos libera de esas tareas repetitivas y nos permite enfocarnos en lo que realmente importa."
     },
     {
-      "date": "18 de Junio de 2024",
+      "date": "18 de Junio de 2024 - Guido Risso",
       "title": "El futuro del aprendizaje: Nunca dejes de aprender",
       "url": "https://www.linkedin.com/pulse/el-futuro-del-aprendizaje-nunca-dejes-de-aprender-guido-risso-mgt1f/?trackingId=WsY6ezkrRpeNF6HszPF1Yw%3D%3D",
       "image": "/portBlog5.png",
-      "pos": "0",
+      "pos": "1",
       "description": "En este número, exploramos cómo la inteligencia artificial está transformando la formación profesional, desde la personalización del aprendizaje hasta el feedback instantáneo y las experiencias de gamificación que hacen que aprender sea más efectivo y divertido que nunca."
     },
     {
-      "date": "29 de Abril de 2024",
+      "date": "29 de Abril de 2024 - Guido Risso",
       "title": "Toolings: ¿Nuevas habilidades del futuro?",
       "url": "https://www.linkedin.com/pulse/toolings-nuevas-habilidades-del-futuro-guido-risso-xddof/?trackingId=kJSoLdckSwq3XUOZGyRZRw%3D%3D",
       "image": "/portBlog3.png",
-      "pos": "0",
+      "pos": "1",
       "description": "En este #3 artículo de mi newsletter, vengo a tratar un tema del cual vengo pensando bastante... La importancia y el impacto que tiene el conocimiento del uso de herramientas. El objetivo de este artículo es compartir mi visión sobre este tema y cómo el hecho de tener conocimientos sobre herramientas permite destacarte o mismo optimizar tu trabajo frente al resto. En mi caso, menciono algunas herramientas como Power BI, App sheet, Power Automate, Chat GPT, Gemini o mismo excel."
     },
     {
-      "date": "21 de Febrero de 2024",
+      "date": "21 de Febrero de 2024 - Guido Risso",
       "title": "Reinventando a nuestro EX con un toque disruptivo",
       "url": "https://www.linkedin.com/pulse/reinventando-nuestro-ex-con-un-toque-disruptivo-guido-risso-xgt4f/",
       "image": "/portBlog2.png",
@@ -203,12 +203,69 @@
       "description": "No te dejes llevar por el título y te invito a que sigas leyendo. En este segundo artículo voy a estar hablando de como la tecnología puede ayudarnos a transformar nuestro 𝗘𝗺𝗽𝗹𝗼𝘆𝗲𝗲 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲. Comparto algunos ejemplos y casos de compañias que ya se encuentran en este estadío de 𝗛𝗥 𝗧𝗲𝗰𝗵 teniendo a la tecnología como su principal aliada."
     },
     {
-      "date": "17 de Enero de 2024",
+      "date": "17 de Enero de 2024 - Guido Risso",
       "title": "¿Cómo mantener lo humano en un mundo tecnológico?",
       "url": "https://www.linkedin.com/pulse/c%C3%B3mo-mantener-lo-humano-en-un-mundo-tecnol%C3%B3gico-guido-risso-gifzf/",
       "image": "/portBlog1.png",
       "pos": "1",
       "description": "Cada vez hay más tecnología para optimizar nuestras tareas o servicios por lo cuál a veces se nos olvida la importancia que tiene el toque humano por este motivo, quiero invitarte a que leas esta primera edición en donde reflexionaré sobre como hacerle frente a este contexto actual."
+    },
+    
+    {
+      "date": "20 de agosto de 2024 - Brian Andersen",
+      "title": "#7 ¿Qué es “liderar”?",
+      "url": "https://www.linkedin.com/pulse/7-qu%C3%A9-es-liderar-brian-andersen-elu2f/",
+      "image": "/portBlogBri.png",
+      "pos": "0",
+      "description": "Durante las últimas semanas, la temática liderazgo ha ganado mucho terreno en mi día a día."
+    },
+    {
+      "date": "22 de mayo de 2024 - Brian Andersen",
+      "title": "#6 La primera impresión",
+      "url": "https://www.linkedin.com/pulse/6-la-primera-impresi%C3%B3n-brian-andersen-mwvyf/",
+      "image": "/portBlogBri.png",
+      "pos": "1",
+      "description": "Hace algunos años, leyendo el libro “La cultura Google”, recuerdo que uno de los puntos que más me había impactado fueron las posibilidades que teniamos de optimizar un proceso de selección: y fundamentalmente la cantidad de sesgos que se hacían presentes en ese encuentro, que pueden llevar a la discriminación y eventual pérdida de talento. "
+    },
+    {
+      "date": "11 de abril de 2024 - Brian Andersen",
+      "title": "#5 Cambiando el mindset en HR",
+      "url": "https://www.linkedin.com/pulse/5-cambiando-el-mindset-en-hr-brian-andersen-ommef/",
+      "image": "/portBlogBri.png",
+      "pos": "1",
+      "description": "Hay dos frases que me resuenan mucho cuando hablamos de estos temas: “Lo único constante es el cambio” - “Cuando todo cambia, lo más importante es saber qué queremos mantener”"
+    },
+    {
+      "date": "20 de marzo de 2024 - Brian Andersen",
+      "title": "#4 Ocúpese personalmente de lo importante y automatice el resto",
+      "url": "https://www.linkedin.com/pulse/4-oc%C3%BApese-personalmente-de-lo-importante-y-automatice-brian-andersen-amvaf/",
+      "image": "/portBlogBri.png",
+      "pos": "1",
+      "description": "Dicen los que saben que es el secreto de un rendimiento sobresaliente. Y también, es la frase que nos encontramos en el home principal de Power Automate en español. 😜"
+    },
+    {
+      "date": "6 de marzo de 2024 - Brian Andersen",
+      "title": "#3 IA en el trabajo, ¿qué pasará con tu futuro?",
+      "url": "https://www.linkedin.com/pulse/3-ia-en-el-trabajo-qu%C3%A9-pasar%C3%A1-con-tu-futuro-brian-andersen-l6e2f/",
+      "image": "/portBlogBri.png",
+      "pos": "1",
+      "description": "Posiblemente uno de los temas más atrapantes, de más impacto y (vamos a decir la verdad) más “de moda” en los últimos tiempos sea el de la Inteligencia Artificial generativa."
+    },
+    {
+      "date": "20 de febrero de 2024 - Brian Andersen",
+      "title": "#2 Si querés ser un buen líder, no dejes nunca de conversar",
+      "url": "https://www.linkedin.com/pulse/2-si-quer%C3%A9s-ser-un-buen-l%C3%ADder-dejes-nunca-de-brian-andersen-eak8f/",
+      "image": "/portBlogBri.png",
+      "pos": "1",
+      "description": "Las “buenas prácticas” de liderazgo han ido mutando a medida que fueron cambiando las dinámicas laborales (tipos de estructuras, objetivos, incorporación de la tecnología, trabajo remoto, etc). Pero parece haber un acuerdo común por estos tiempos: para generar equipos sólidos y con altos resultados debemos forjar la confianza. Y cuando hablamos de confianza, ponemos foco en salirnos del micro control / micro managment, brindar herramientas y formación necesaria, y acompañamiento preciso como una especie de brújula."
+    },
+    {
+      "date": "6 de Febrero de 2024 - Brian Andersen",
+      "title": "#1 Dirija a personas, no a números",
+      "url": "https://www.linkedin.com/pulse/1-dirija-personas-n%25C3%25BAmeros-brian-andersen-ivwuf/?trackingId=0%2BIW3haVQ0mlYmGXTF4c%2Fw%3D%3D",
+      "image": "/portBlogBri.png",
+      "pos": "1",
+      "description": "Los datos estaban, simplemente no los estabamos aprovechando hacia nuestro cliente interno. Y estos datos los tenía HR."
     }
   ]
 }

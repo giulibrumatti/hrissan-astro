@@ -16,8 +16,8 @@ const { className } = Astro.props;
 
 <Container>
   <div class="mt-16 md:mt-0">
-    <Title className="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-      HR Evolution Program
+    <Title className="text-4xl lg:text-5xl font-bold lg:tracking-tight ">
+      <span class="text-red-400">HR</span> Evolution Program 🤖
     </Title>
     <h3 class="text-2xl mt-4 font-bold text-red-300">
       "Un año más tarde desearás haber comenzado hoy"
@@ -110,7 +110,7 @@ const { className } = Astro.props;
 <Container className={className}>
   <div id="services-game" class="mt-16 md:mt-0">
     <Title className="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-      HR Tech: The Game
+      <span class="text-red-400">HR</span> Tech: The Game 🕹️
     </Title>
     <h3 class="text-2xl mt-4 font-bold text-red-300">
       "Conquista cada galaxia mientras dominás nuevas habilidades."
@@ -146,10 +146,7 @@ const { className } = Astro.props;
             />
           </div>
           <div>
-            <h3 class="font-semibold text-lg text-heading-1">{item.title}</h3>
-            <Paragraph className="mt-2 leading-relaxed">
-              {item.description}
-            </Paragraph>
+            <h3 class="justify-center font-semibold text-lg text-heading-1">{item.title}</h3>
           </div>
         </div>
       ))
