@@ -3,32 +3,36 @@ import Container from "./elements/Container.astro";
 import FooterNav from "./elements/FooterNav.astro";
 import GroupFooterNav from "./elements/GroupFooterNav.astro";
 import Paragraph from "./elements/Paragraph.astro";
+import Title from "./elements/Title.astro";
 import Instragram from "./icons/Instragram.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 import Mail from "./icons/Mail.astro";
 import YouTube from "./icons/YouTube.astro";
 
 import { basics, main } from "datos.json";
-const { urlLinkedin, urlInstagram, urlYoutube, email, logo } = basics;
+const { urlLinkedin, urlInstagram, urlYoutube, email, logo, image } = basics;
 
-const recursosItem = main.find(item => item.name === "Recursos");
-const servicioItem = main.find(item => item.name === "Servicio");
-const contenidoItem = main.find(item => item.name === "Contenido");
+const recursosItem = main.find((item) => item.name === "Recursos");
+const servicioItem = main.find((item) => item.name === "Servicio");
+const contenidoItem = main.find((item) => item.name === "Contenido");
 
-const recursos = recursosItem?.submain?.map(sub => ({
-  itemText: sub.text,
-  itemLink: sub.url
-})) || [];
+const recursos =
+  recursosItem?.submain?.map((sub) => ({
+    itemText: sub.text,
+    itemLink: sub.url,
+  })) || [];
 
-const servicio = servicioItem?.submain?.map(sub => ({
-  itemText: sub.text,
-  itemLink: sub.url
-})) || [];
+const servicio =
+  servicioItem?.submain?.map((sub) => ({
+    itemText: sub.text,
+    itemLink: sub.url,
+  })) || [];
 
-const contenido = contenidoItem?.submain?.map(sub => ({
-  itemText: sub.text,
-  itemLink: sub.url
-})) || [];
+const contenido =
+  contenidoItem?.submain?.map((sub) => ({
+    itemText: sub.text,
+    itemLink: sub.url,
+  })) || [];
 
 const footerNav3 = [
   {
@@ -40,7 +44,6 @@ const footerNav3 = [
     itemLink: "#",
   },
 ];
-
 ---
 
 <div class="mt-8"></div>
@@ -81,34 +84,52 @@ const footerNav3 = [
     >
       <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
         <div class="h-full">
-          <a href="/" class="relative flex items-center gap-3">
-            <img src={logo} alt="logo" class="max-h-20" />
-          </a>
+          <Title>
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-br from-red-300 from-20% via-primary via-30% to-red-100"
+              >Potenciando tu cambio</span
+            >
+          </Title>
           <Paragraph className={"mt-2"}>
-            La tecnología está transformando HR: no sólo facilitando
-            procesos, sino también creando nuevas oportunidades para la
-            gestión del talento y la cultura organizacional. Te ayudamos a
-            llevar HR al siguiente nivel a través del uso de la tecnología y
-            los datos.
+            La tecnología está transformando HR: no sólo facilitando procesos,
+            sino también creando nuevas oportunidades para la gestión del
+            talento y la cultura organizacional. Te ayudamos a llevar HR al
+            siguiente nivel a través del uso de la tecnología y los datos.
           </Paragraph>
         </div>
         <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
-          <a href={urlLinkedin} target="_blank" class="transition hover:text-heading-1 hover:scale-105">
+          <a
+            href={urlLinkedin}
+            target="_blank"
+            class="transition hover:text-heading-1 hover:scale-105"
+          >
             <LinkedIn>
               <span class="sr-only">LinkedIn</span>
             </LinkedIn>
           </a>
-          <a href={urlInstagram} target="_blank" class="transition hover:text-heading-1 hover:scale-105">
+          <a
+            href={urlInstagram}
+            target="_blank"
+            class="transition hover:text-heading-1 hover:scale-105"
+          >
             <Instragram>
               <span class="sr-only">Instagram</span>
             </Instragram>
           </a>
-          <a href={urlYoutube} target="_blank" class="transition hover:text-heading-1 hover:scale-105">
+          <a
+            href={urlYoutube}
+            target="_blank"
+            class="transition hover:text-heading-1 hover:scale-105"
+          >
             <YouTube>
               <span class="sr-only">YouTube</span>
             </YouTube>
           </a>
-          <a href={email} target="_blank" class="transition hover:text-heading-1 hover:scale-105">
+          <a
+            href={email}
+            target="_blank"
+            class="transition hover:text-heading-1 hover:scale-105"
+          >
             <Mail>
               <span class="sr-only">Mail</span>
             </Mail>
@@ -133,10 +154,10 @@ const footerNav3 = [
         class="flex justify-between items-center gap-6 md:text-lg text-heading-3"
       >
         <div>
-          &copy; <span id="year"></span> HRissan. All right reserved
+          &copy; <span id="year"></span> HRissan.
         </div>
         <div>
-          Proudly made by <a
+          by <a
             href="https://cv-gbrumatti-web.vercel.app/"
             target="_blank"
             class="font-semibold">G. Brumatti</a

@@ -1,6 +1,6 @@
 {
   "basics": {
-    "logo": "/hrissan.png",
+    "logo": "logoimage.png",
     "image": "logoimage.png",
     "imageGuido": "PerfilGuido.png",
     "imageBrian": "PerfilBrian.png",
@@ -28,7 +28,7 @@
         },
         {
           "text": "HR Tech: The Game",
-          "url": "#services-game"
+          "url": "/soon"
         },
         {
           "text": "Consultoría",
@@ -36,7 +36,7 @@
         },
         {
           "text": "Mentorías TBC",
-          "url": "#"
+          "url": "/soon"
         }
       ]
     },
@@ -45,15 +45,15 @@
       "submain": [
         {
           "text": "Tableros en Excel",
-          "url": "#"
+          "url": "/soon"
         },
         {
           "text": "Tableros de Power BI",
-          "url": "#"
+          "url": "/soon"
         },
         {
           "text": "Ebook",
-          "url": "#"
+          "url": "/soon"
         }
       ]
     },

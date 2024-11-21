@@ -1,0 +1,21 @@
+---
+import Container from "@/components/elements/Container.astro";
+import Title from "@/components/elements/Title.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Bienvenidos a HRissan">
+  <main
+    class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden"
+    id="articles"
+  >
+    <Container className="space-y-10 md:sapce-y-12 p-28 text-center">
+      <Title className="text-4xl">
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-br from-red-300 from-20% via-primary via-30% to-red-100"
+          >Próximamente...</span
+        ></Title
+      >
+    </Container>
+  </main>
+</Layout>
