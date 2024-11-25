@@ -2,6 +2,8 @@
 import AboutUs from "@/components/AboutUs.astro";
 import Blog from "@/components/Blog.astro";
 import Services from "@/components/Services.astro";
+import VideoCarousel from "@/components/video_section/VideoCarousel";
+import { info } from "@/data/infoVideo";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -9,6 +11,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Bienvenidos a HRissan">
   <main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
     <Hero />
+    <VideoCarousel projects={info.projects} client:only />
     <AboutUs />
     <Services />
     <Blog />

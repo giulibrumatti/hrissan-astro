@@ -3,7 +3,7 @@ import Container from "./elements/Container.astro";
 import FooterNav from "./elements/FooterNav.astro";
 import GroupFooterNav from "./elements/GroupFooterNav.astro";
 import Paragraph from "./elements/Paragraph.astro";
-import Title from "./elements/Title.astro";
+import TitleColor from "./elements/TitleColor.astro";
 import Instragram from "./icons/Instragram.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 import Mail from "./icons/Mail.astro";
@@ -84,12 +84,7 @@ const footerNav3 = [
     >
       <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
         <div class="h-full">
-          <Title>
-            <span
-              class="text-transparent bg-clip-text bg-gradient-to-br from-red-300 from-20% via-primary via-30% to-red-100"
-              >Potenciando tu cambio</span
-            >
-          </Title>
+          <TitleColor className="text-3xl font-bold"> Potenciando tu cambio </TitleColor>
           <Paragraph className={"mt-2"}>
             La tecnología está transformando HR: no sólo facilitando procesos,
             sino también creando nuevas oportunidades para la gestión del
