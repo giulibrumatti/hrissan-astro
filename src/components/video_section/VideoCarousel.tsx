@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import VideoCard from "./VideoCard";
 
-interface ProjectCarouselProps {
-  projects: (typeof info)["projects"];
+interface VideoCarouselProps {
+  videos: (typeof info)["videos"];
 }
 
 function CustomArrow(props: any) {
@@ -26,7 +26,7 @@ function CustomArrow(props: any) {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className={
-            "h-6 w-6 text-secondary dark:text-dk-secondary" +
+            "h-6 w-6 text-white" +
             (!left ? " rotate-180" : "")
           }
           fill="none"
@@ -45,8 +45,8 @@ function CustomArrow(props: any) {
   );
 }
 
-export default function ProjectCarousel(props: ProjectCarouselProps) {
-  const { projects } = props;
+export default function ProjectCarousel(props: VideoCarouselProps) {
+  const { videos } = props;
   const initialMount = React.useRef(true);
 
   var settings = {
@@ -91,13 +91,17 @@ export default function ProjectCarousel(props: ProjectCarouselProps) {
 
   return (
     <>
-      <Title>Videos de YouTube</Title>
+      <div className="text-center max-w-3xl mx-auto space-y-4 mb-6">
+        <h1 className="text-heading-1 font-semibold text-4xl lg:text-5xl">
+          Videos
+        </h1>
+      </div>
       <div className="flex justify-center flex-col items-center">
         <div className="slider-container w-5/6">
           <Slider {...settings}>
-            {projects.map((project, index) => (
+            {videos.map((videos, index) => (
               <div key={index} className="px-2">
-                <VideoCard key={index} project={project} />
+                <VideoCard key={index} videos={videos} />
               </div>
             ))}
           </Slider>

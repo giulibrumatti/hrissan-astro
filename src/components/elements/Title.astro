@@ -1,12 +1,13 @@
 ---
 export interface Props{
     className?:string
+    children: any;
 }
 
-const {className} = Astro.props
+const {className, children} = Astro.props
 ---
 
 
 <h1 class={`text-heading-1 font-semibold ${className}`}>
-    <slot/>
+ <slot>{children}</slot> 
 </h1>

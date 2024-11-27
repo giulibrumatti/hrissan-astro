@@ -2,8 +2,8 @@
 import { blog } from "datos.json";
 import Button from "./elements/Button.astro";
 import Container from "./elements/Container.astro";
-import Title from "./elements/Title.astro";
 import Post from "./elements/Post.astro";
+import Title from "./elements/Title.astro";
 
 type ServicesProps = {
   title: string;
@@ -17,7 +17,7 @@ const filteredData = blog.filter(item => item.pos === "0");
 <section id="blog">
   <Container className="space-y-10 md:sapce-y-12">
     <div class="text-center max-w-3xl mx-auto space-y-4">
-      <Title className="sm:text-3xl md:text-5xl"> Artículos </Title>
+      <Title className="text-4xl lg:text-5xl"> Artículos </Title>
     </div>
 
     {
