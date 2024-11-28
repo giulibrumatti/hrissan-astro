@@ -24,11 +24,11 @@
       "submain": [
         {
           "text": "HR Evolution Program",
-          "url": "/servicespageProgram"
+          "url": "/pages/program"
         },
         {
           "text": "HR Tech: The Game",
-          "url": "/soon"
+          "url": "/page/soon"
         },
         {
           "text": "Consultoría",
@@ -36,7 +36,7 @@
         },
         {
           "text": "Mentorías TBC",
-          "url": "/soon"
+          "url": "/page/soon"
         }
       ]
     },
@@ -45,15 +45,15 @@
       "submain": [
         {
           "text": "Tableros en Excel",
-          "url": "/soon"
+          "url": "/page/soon"
         },
         {
           "text": "Tableros de Power BI",
-          "url": "/soon"
+          "url": "/page/soon"
         },
         {
           "text": "Ebook",
-          "url": "/soon"
+          "url": "/page/soon"
         }
       ]
     },
@@ -62,15 +62,11 @@
       "submain": [
         {
           "text": "Artículos",
-          "url": "/articles"
-        },
-        {
-          "text": "Webinars, Streaming & Talks",
-          "url": "#"
+          "url": "/pages/articles"
         },
         {
           "text": "Videos de Youtube",
-          "url": "#"
+          "url": "/pages/videos"
         }
       ]
     }

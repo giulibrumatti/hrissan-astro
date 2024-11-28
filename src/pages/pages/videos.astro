@@ -1,0 +1,56 @@
+---
+import Container from "@/components/elements/Container.astro";
+import Layout from "@/layouts/Layout.astro";
+import Title from "@/components/elements/Title.astro";
+import { info } from "@/data/infoVideo";
+const { videos } = info;
+import Image from "astro/components/Image.astro";
+---
+
+<Layout title="Bienvenidos a HRissan">
+    <main
+        class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden"
+        id="articles"
+    >
+        <Container className="space-y-10 md:sapce-y-12 p-20">
+            <section class="max-w-screen-lg px-4 mx-auto pb-12 sm:px-6 lg:px-8">
+                <div class="mb-8 text-gray-300">
+                    <div class="text-center m-4 p-4">
+                        <Title className="text-3xl ">Todo nuestro contenido en YouTube</Title>
+                    </div>
+                    
+                  <ul
+                    class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 lg:mx-0 lg:max-w-none lg:grid-cols-3 text-white font-bold"
+                  >
+                    {
+                       videos.map((video) => (
+                        <li>
+                          <a
+                            href={ video.link ? `${video.link}` : `https://www.youtube.com/watch?v=${video.videoId}`}
+                            target="_blank"
+                            class="relative top-0 block overflow-hidden rounded-2xl"
+                          >
+                            <figure>
+                              <Image
+                                alt={video.title}
+                                src={video.img_path ? `${video.img_path}` : `https://i.ytimg.com/vi/${video.videoId}/maxresdefault.jpg`}
+                                class="h-55 w-full object-cover"
+                                width={309}
+                                height={176}
+                                decoding="async"
+                                loading="lazy"
+                              />
+                            </figure>
+                            <div class="bg-primary p-4">
+                              <span class="text-sm">{video.description}</span>
+                              <p class="mt-1 text-xs text-slate-400 h-8">{video.title}</p>
+                            </div>
+                          </a>
+                        </li>
+                      ))
+                    }
+                  </ul>
+                </section>
+        </Container>
+    </main>
+</Layout>

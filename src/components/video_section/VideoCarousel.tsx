@@ -91,7 +91,7 @@ export default function ProjectCarousel(props: VideoCarouselProps) {
 
   return (
     <>
-      <div className="text-center max-w-3xl mx-auto space-y-4 mb-6">
+      <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
         <h1 className="text-heading-1 font-semibold text-4xl lg:text-5xl">
           Videos
         </h1>
