@@ -28,7 +28,7 @@
         },
         {
           "text": "HR Tech: The Game",
-          "url": "/page/soon"
+          "url": "/pages/soon"
         },
         {
           "text": "Consultoría",
@@ -36,7 +36,7 @@
         },
         {
           "text": "Mentorías TBC",
-          "url": "/page/soon"
+          "url": "/pages/soon"
         }
       ]
     },
@@ -45,15 +45,15 @@
       "submain": [
         {
           "text": "Tableros en Excel",
-          "url": "/page/soon"
+          "url": "/pages/soon"
         },
         {
           "text": "Tableros de Power BI",
-          "url": "/page/soon"
+          "url": "/pages/soon"
         },
         {
           "text": "Ebook",
-          "url": "/page/soon"
+          "url": "/pages/soon"
         }
       ]
     },
@@ -69,6 +69,10 @@
           "url": "/pages/videos"
         }
       ]
+    },
+    {
+      "name": "Log In",
+      "url": "/pages/soon"
     }
   ],
   "hrEvPro": [
