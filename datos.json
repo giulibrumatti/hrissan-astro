@@ -110,31 +110,31 @@
     {
       "title": "Automatizar procesos de onboarding⁣",
       "description":
-        "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+        "",
       "icon": "/automation.png"
     },
     {
       "title": "Crear un chatbot desde cero⁣",
       "description":
-        "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+        "",
       "icon": "/chatbot.png"
     },
     {
       "title": "Analizar datos de manera efectiva⁣",
       "description":
-        "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+        "",
       "icon": "/data-analytics.png"
     },
     {
       "title": "Desarrollar dashboards impactantes⁣",
       "description":
-        "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+        "",
       "icon": "/dashboard.png"
     },
     {
       "title": "Incorporación de IA dentro de proceso de HR",
       "description":
-        "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+        "",
       "icon": "/robot.png"
     },
     {
