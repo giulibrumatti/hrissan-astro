@@ -1,6 +1,24 @@
 export const info = {
     videos: [
       {
+        title: "Datos y tecnología #2",
+        description:
+          "Revoluciona HR con Automatización",
+        link: null,
+        videoId: "eGKORxjMxuo",
+        img_alt: "HR TECH",
+        img_path: null,
+      },
+      {
+        title: "Datos y tecnología #1",
+        description:
+          "¿Qué es HR Tech?",
+        link: null,
+        videoId: "KlWGdUoxjGs",
+        img_alt: "HR TECH",
+        img_path: null,
+      },
+      {
         title: "HR Tech Programa #8",
         description:
           "Avances de la tecnología y la IA",

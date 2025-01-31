@@ -15,6 +15,7 @@ import { main } from "datos.json";
             class="relative block px-2 py-2 transition hover:text-red-400"
             aria-label={menu.name}
             href={menu.url}
+            target={menu.type}
           >
             {menu.name}
           </a>
@@ -25,6 +26,7 @@ import { main } from "datos.json";
                   <a
                     class="block px-4 py-2 rounded text-gray-200 bg-gray-950 hover:bg-gray-700 hover:text-primary"
                     href={subMenu.url}
+                    
                   >
                     {subMenu.text}
                   </a>

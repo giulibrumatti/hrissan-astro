@@ -1,5 +1,5 @@
 ---
-import { featuresProgram } from "datos.json";
+import { basics, featuresProgram } from "datos.json";
 import ButtonRed from "./elements/ButtonRed.astro";
 import Container from "./elements/Container.astro";
 import Paragraph from "./elements/Paragraph.astro";
@@ -13,8 +13,9 @@ export interface Props {
 }
 const { className } = Astro.props;
 ---
-
-<Container>
+{
+/**
+ * <Container>
   <div class="mt-16 md:mt-0">
     <Title className="text-4xl lg:text-5xl font-bold lg:tracking-tight ">
       <span class="text-red-400">HR</span> Evolution Program 🤖
@@ -106,6 +107,12 @@ const { className } = Astro.props;
     />
   </div>
 </Container>
+ * 
+ * 
+ */
+
+}
+
 <Container className={className}>
   <div id="consultoria" class="mt-16 md:mt-0">
     <Title className="text-4xl lg:text-5xl font-bold lg:tracking-tight">
@@ -125,7 +132,7 @@ const { className } = Astro.props;
   <div class="text-center mt-8">
     <ButtonRed
       text="¡Quiero conocer más!"
-      href=""
+      href={basics.hrefConoce}
       className="flex justify-center w-full sm:w-max"
       variant="primary"
     />

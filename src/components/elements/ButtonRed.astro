@@ -17,7 +17,7 @@ export interface Props{
 const {href, text,className, variant} = Astro.props
 ---
 
-<a
+<a target="_blank" 
   class={`${baseClasses} ${borderClasses} ${bgColorClasses} ${disableClasses} ${fontSizeClasses} ${ringClasses} ${className}`}
   href={href}
 >

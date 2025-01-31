@@ -12,7 +12,10 @@
     "urlLinBrian": "https://www.linkedin.com/in/andersenbrianhr/",
     "urlInstagram": "https://www.instagram.com/_hrissan/",
     "newsletter": "",
-    "urlYoutube": "https://www.youtube.com/@HRissan_"
+    "urlYoutube": "https://www.youtube.com/@HRissan_",
+    "whg": "https://api.whatsapp.com/send/?phone=541130270172&text&type=phone_number&app_absent=0",
+    "hrefSumate": "https://forms.gle/T4PXHTGb3QR9wZYc8",
+    "hrefConoce": "https://drive.google.com/file/d/1558kU8nr59XJ6IswmGm22ym_6mdJgyVk/view"
   },
   "main": [
     {
@@ -23,20 +26,16 @@
       "name": "Servicio",
       "submain": [
         {
-          "text": "HR Evolution Program",
-          "url": "/pages/program"
-        },
-        {
           "text": "HR Tech: The Game",
-          "url": "/pages/soon"
+          "url": "/soon"
         },
         {
           "text": "Consultoría",
-          "url": "#consultoria"
+          "url": "/soon"
         },
         {
           "text": "Mentorías TBC",
-          "url": "/pages/soon"
+          "url": "/soon"
         }
       ]
     },
@@ -45,15 +44,15 @@
       "submain": [
         {
           "text": "Tableros en Excel",
-          "url": "/pages/soon"
+          "url": "/soon"
         },
         {
           "text": "Tableros de Power BI",
-          "url": "/pages/soon"
+          "url": "/soon"
         },
         {
           "text": "Ebook",
-          "url": "/pages/soon"
+          "url": "/soon"
         }
       ]
     },
@@ -62,17 +61,18 @@
       "submain": [
         {
           "text": "Artículos",
-          "url": "/pages/articles"
+          "url": "/articles"
         },
         {
           "text": "Videos de Youtube",
-          "url": "/pages/videos"
+          "url": "/videos"
         }
       ]
     },
     {
-      "name": "Log In",
-      "url": "/pages/soon"
+      "name": "Academy",
+      "url": "/https://hrissan-academy.up.railway.app",
+      "type": "_blank"
     }
   ],
   "hrEvPro": [

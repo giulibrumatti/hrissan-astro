@@ -4,8 +4,8 @@ import Button from "./elements/Button.astro";
 import Container from "./elements/Container.astro";
 import Paragraph from "./elements/Paragraph.astro";
 import TitleColor from "./elements/TitleColor.astro";
-const { image } = basics;
-const { email } = basics;
+const { image, whg } = basics;
+
 ---
 
 <section class="relative pt-32 lg:pt-36">
@@ -42,7 +42,7 @@ const { email } = basics;
             <div class="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
                 <Button
                     text="Contactar"
-                    href={email}
+                    href={whg}
                     className="flex justify-center w-full sm:w-max"
                     variant="primary"
                 />
