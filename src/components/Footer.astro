@@ -8,9 +8,19 @@ import Instragram from "./icons/Instragram.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 import Mail from "./icons/Mail.astro";
 import YouTube from "./icons/YouTube.astro";
+import TikTok from "./icons/TikTok.astro";
 
 import { basics, main } from "datos.json";
-const { urlLinkedin, urlInstagram, urlYoutube, email } = basics;
+const {
+  urlLinkedin,
+  urlInstagram,
+  urlYoutube,
+  email,
+  urlTikTok,
+  newsletterB,
+  newsletterGR,
+  newsletter,
+} = basics;
 
 const servicioItem = main.find((item) => item.name === "Servicio");
 const contenidoItem = main.find((item) => item.name === "Contenido");
@@ -27,14 +37,42 @@ const contenido =
     itemLink: sub.url,
   })) || [];
 
+type LinkItem = {
+  itemText: string;
+  itemLink: { url: string };
+};
+
+const redes = [
+  {
+    itemText: "LinkedIn",
+    itemLink: urlLinkedin,
+  },
+  {
+    itemText: "Instagram",
+    itemLink: urlInstagram,
+  },
+  {
+    itemText: "TikTok",
+    itemLink: urlTikTok,
+  },
+  {
+    itemText: "YouTube",
+    itemLink: urlYoutube,
+  },
+];
+
 const newsletters = [
   {
+    itemText: "Newsletter HRissan",
+    itemLink: newsletter,
+  },
+  {
     itemText: "Newsletter Guido",
-    itemLink: "https://www.linkedin.com/newsletters/the-next-hr-trends-tech-6940293600823894017/",
+    itemLink: newsletterGR,
   },
   {
     itemText: "Newsletter Brian",
-    itemLink: "https://www.linkedin.com/newsletters/hr-con-r-de-reflexi%25C3%25B3n-7158808175704457216/",
+    itemLink: newsletterB,
   },
 ];
 ---
@@ -77,7 +115,7 @@ const newsletters = [
     >
       <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
         <div class="h-full">
-          <TitleColor className="text-3xl font-bold"> Potenciando tu cambio </TitleColor>
+          <TitleColor className="text-3xl font-bold"> HRISSAN 🚀</TitleColor>
           <Paragraph className={"mt-2"}>
             La tecnología está transformando HR: no sólo facilitando procesos,
             sino también creando nuevas oportunidades para la gestión del
@@ -105,6 +143,15 @@ const newsletters = [
             </Instragram>
           </a>
           <a
+            href={urlTikTok}
+            target="_blank"
+            class="transition hover:text-heading-1 hover:scale-105"
+          >
+            <TikTok>
+              <span class="sr-only">TikTok</span>
+            </TikTok>
+          </a>
+          <a
             href={urlYoutube}
             target="_blank"
             class="transition hover:text-heading-1 hover:scale-105"
@@ -113,6 +160,7 @@ const newsletters = [
               <span class="sr-only">YouTube</span>
             </YouTube>
           </a>
+
           <a
             href={email}
             target="_blank"
@@ -126,12 +174,13 @@ const newsletters = [
       </div>
 
       <GroupFooterNav>
-        <FooterNav title={"Servicio"} navItems={servicio} />
-        <FooterNav title={"Contenido"} navItems={contenido} />
+        <FooterNav type="_self" title={"Contenido"} navItems={contenido} />
+        <FooterNav type="_self" title={"Servicio"} navItems={servicio} />
       </GroupFooterNav>
 
       <GroupFooterNav>
-        <FooterNav title={"Newsletter"} navItems={newsletters} />
+        <FooterNav type="_blank" title={"Suscribite"} navItems={newsletters} />
+        <FooterNav type="_blank" title={"Redes"} navItems={redes} />
       </GroupFooterNav>
     </div>
   </Container>

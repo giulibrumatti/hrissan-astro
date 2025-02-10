@@ -11,8 +11,10 @@
     "urlLinGuido": "https://www.linkedin.com/in/guidorisso/",
     "urlLinBrian": "https://www.linkedin.com/in/andersenbrianhr/",
     "urlInstagram": "https://www.instagram.com/_hrissan/",
+    "urlTikTok": "https://www.tiktok.com/@_hrissan",
     "newsletterGR": "https://www.linkedin.com/newsletters/the-next-hr-trends-tech-6940293600823894017/",
     "newsletterB": "https://www.linkedin.com/newsletters/hr-con-r-de-reflexi%25C3%25B3n-7158808175704457216/",
+    "newsletter": "https://hrissan.substack.com/",
     "urlYoutube": "https://www.youtube.com/@HRissan_",
     "whg": "https://api.whatsapp.com/send/?phone=541130270172&text&type=phone_number&app_absent=0",
     "hrefSumate": "https://forms.gle/T4PXHTGb3QR9wZYc8",
@@ -28,7 +30,7 @@
       "submain": [
         {
           "text": "Consultoría",
-          "url": "/hrissan.com.ar/#consultoria"
+          "url": "/#consultoria"
         }
       ]
     },
