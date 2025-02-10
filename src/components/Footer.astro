@@ -10,17 +10,10 @@ import Mail from "./icons/Mail.astro";
 import YouTube from "./icons/YouTube.astro";
 
 import { basics, main } from "datos.json";
-const { urlLinkedin, urlInstagram, urlYoutube, email, logo, image } = basics;
+const { urlLinkedin, urlInstagram, urlYoutube, email } = basics;
 
-const recursosItem = main.find((item) => item.name === "Recursos");
 const servicioItem = main.find((item) => item.name === "Servicio");
 const contenidoItem = main.find((item) => item.name === "Contenido");
-
-const recursos =
-  recursosItem?.submain?.map((sub) => ({
-    itemText: sub.text,
-    itemLink: sub.url,
-  })) || [];
 
 const servicio =
   servicioItem?.submain?.map((sub) => ({
@@ -34,14 +27,14 @@ const contenido =
     itemLink: sub.url,
   })) || [];
 
-const footerNav3 = [
+const newsletters = [
   {
-    itemText: "Buenos Aires,",
-    itemLink: "#",
+    itemText: "Newsletter Guido",
+    itemLink: "https://www.linkedin.com/newsletters/the-next-hr-trends-tech-6940293600823894017/",
   },
   {
-    itemText: "Argentina",
-    itemLink: "#",
+    itemText: "Newsletter Brian",
+    itemLink: "https://www.linkedin.com/newsletters/hr-con-r-de-reflexi%25C3%25B3n-7158808175704457216/",
   },
 ];
 ---
@@ -134,12 +127,11 @@ const footerNav3 = [
 
       <GroupFooterNav>
         <FooterNav title={"Servicio"} navItems={servicio} />
-        <FooterNav title={"Recursos"} navItems={recursos} />
+        <FooterNav title={"Contenido"} navItems={contenido} />
       </GroupFooterNav>
 
       <GroupFooterNav>
-        <FooterNav title={"Contenido"} navItems={contenido} />
-        <FooterNav title={"Ubicación"} navItems={footerNav3} />
+        <FooterNav title={"Newsletter"} navItems={newsletters} />
       </GroupFooterNav>
     </div>
   </Container>
@@ -150,13 +142,6 @@ const footerNav3 = [
       >
         <div>
           &copy; <span id="year"></span> HRissan.
-        </div>
-        <div>
-          by <a
-            href="https://cv-gbrumatti-web.vercel.app/"
-            target="_blank"
-            class="font-semibold">G. Brumatti</a
-          >
         </div>
       </div>
     </Container>

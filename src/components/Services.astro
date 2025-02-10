@@ -1,138 +1,37 @@
 ---
-import { basics, featuresProgram } from "datos.json";
+import { basics } from "datos.json";
 import ButtonRed from "./elements/ButtonRed.astro";
 import Container from "./elements/Container.astro";
 import Paragraph from "./elements/Paragraph.astro";
 import Title from "./elements/Title.astro";
-import Module from "./icons/Module.astro";
-import Play from "./icons/Play.astro";
-import Time from "./icons/Time.astro";
 
 export interface Props {
   className?: string;
 }
 const { className } = Astro.props;
 ---
-{
-/**
- * <Container>
-  <div class="mt-16 md:mt-0">
-    <Title className="text-4xl lg:text-5xl font-bold lg:tracking-tight ">
-      <span class="text-red-400">HR</span> Evolution Program 🤖
-    </Title>
-    <h3 class="text-2xl mt-4 font-bold text-red-300">
-      "Un año más tarde desearás haber comenzado hoy"
-    </h3>
-
-    <Paragraph className="text-lg mt-4">
-      La necesidad de contar con un HR más estratégico y con mayor impacto ha
-      llegado. En esta aventura viajaremos hacia el planeta de los datos, de la
-      inteligencia artificial y la automatización. En 4 encuentros de 2 horas
-      cada uno, revisaremos los conceptos generales y practicaremos cómo poder
-      aplicarlos y llevarlos a cabo en tu día a día ¿Te sumas a la revolución de
-      HR Tech?
-    </Paragraph>
-  </div>
-  <div class="text-center mt-8">
-    <ButtonRed
-      text="¡Sumate al viaje!"
-      href=""
-      className="flex justify-center w-full sm:w-max"
-      variant="primary"
-    />
-  </div>
-
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-    {
-      featuresProgram.map((item) => (
-        <div class="flex gap-4 items-start rounded-3xl border border-box-border bg-box-bg p-5 sm:p-6 lg:p-8">
-          <div class="mt-1 rounded-full p-2 shrink-0">
-            <img
-              class="filter brightness-0 invert sepia saturate-[1000%] hue-rotate-[180deg] w-10"
-              src={item.icon}
-              alt="icon"
-            />
-          </div>
-          <div>
-            <h3 class="font-semibold text-lg text-heading-1">{item.title}</h3>
-            <Paragraph className="mt-2 leading-relaxed">
-              {item.description}
-            </Paragraph>
-          </div>
-        </div>
-      ))
-    }
-  </div>
-  <div class="text-white mt-10">
-    <ul class="flex flex-col gap-4 justify-center sm:flex-row">
-      <li
-        class="flex items-center rounded-3xl border border-box-border bg-box-bg p-2 sm:p-3 lg:p-4"
-      >
-        <Time />
-        <h3
-          class="font-semibold text-lg text-heading-1 ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl"
-        >
-          8 horas de aprendizaje
-        </h3>
-      </li>
-      <li
-        class="flex items-center rounded-3xl border border-box-border bg-box-bg p-2 sm:p-3 lg:p-4"
-      >
-        <Module />
-        <h3
-          class="font-semibold text-lg text-heading-1 ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl"
-        >
-          2 módulos
-        </h3>
-      </li>
-      <li
-        class="flex items-center rounded-3xl border border-box-border bg-box-bg p-2 sm:p-3 lg:p-4"
-      >
-        <Play />
-        <h3
-          class="font-semibold text-lg text-heading-1 ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl"
-        >
-          4 clases
-        </h3>
-      </li>
-    </ul>
-  </div>
-  <div class="text-center mt-8">
-    <ButtonRed
-      text="Ver más información"
-      href="/servicesHRProgram"
-      className="flex justify-center w-full sm:w-max"
-      {className}
-      variant="secondary"
-    />
-  </div>
-</Container>
- * 
- * 
- */
-
-}
 
 <Container className={className}>
-  <div id="consultoria" class="mt-16 md:mt-0">
-    <Title className="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+  <Title className="text-4xl lg:text-5xl text-center mb-10"> Servicios </Title>
+  <div id="consultoria" class="">
+    <Paragraph
+      className="text-2xl lg:text-3xl lg:tracking-tight font-bold underline text-red-300"
+    >
       Consultoria individual o para organizaciones
-    </Title>
-    <h3 class="text-2xl mt-4 font-bold text-heading-3">
-      Nuestra consultoría en <span class="text-red-300"
-        >People Analytics e Inteligencia Artificial</span
-      > para Recursos Humanos te acompaña a transformar la manera en que <span
-        class="text-red-300">gestionás tu equipo y optimizás tus procesos.</span
-      > Te ayudamos a implementar soluciones basadas en <span
-        class="text-red-300">datos y tecnología</span
-      > para mejorar la toma de decisiones estratégicas, automatización y maximizar
-      el rendimiento organizacional.
+    </Paragraph>
+    <h3 class="text-2xl mt-4 text-heading-3">
+      Además de nuestros cursos de formación, brindamos consultorías
+      personalizadas para ayudarte a transformar la manera en la que gestionas a
+      tus equipo. Implementamos soluciones basadas en <span class="text-red-300"
+        >datos y tecnología</span
+      > para mejorar la toma de decisiones estratégicas, incorporando automatización
+      y maximizando el rendimiento organizacional.
     </h3>
   </div>
   <div class="text-center mt-8">
     <ButtonRed
       text="¡Quiero conocer más!"
-      href={basics.hrefConoce}
+      href={basics.whg}
       className="flex justify-center w-full sm:w-max"
       variant="primary"
     />

@@ -11,11 +11,12 @@
     "urlLinGuido": "https://www.linkedin.com/in/guidorisso/",
     "urlLinBrian": "https://www.linkedin.com/in/andersenbrianhr/",
     "urlInstagram": "https://www.instagram.com/_hrissan/",
-    "newsletter": "",
+    "newsletterGR": "https://www.linkedin.com/newsletters/the-next-hr-trends-tech-6940293600823894017/",
+    "newsletterB": "https://www.linkedin.com/newsletters/hr-con-r-de-reflexi%25C3%25B3n-7158808175704457216/",
     "urlYoutube": "https://www.youtube.com/@HRissan_",
     "whg": "https://api.whatsapp.com/send/?phone=541130270172&text&type=phone_number&app_absent=0",
     "hrefSumate": "https://forms.gle/T4PXHTGb3QR9wZYc8",
-    "hrefConoce": "https://drive.google.com/file/d/1558kU8nr59XJ6IswmGm22ym_6mdJgyVk/view"
+    "urlConsultoria": "https://drive.google.com/file/d/1558kU8nr59XJ6IswmGm22ym_6mdJgyVk/view"
   },
   "main": [
     {
@@ -26,33 +27,8 @@
       "name": "Servicio",
       "submain": [
         {
-          "text": "HR Tech: The Game",
-          "url": "/soon"
-        },
-        {
           "text": "Consultoría",
-          "url": "/soon"
-        },
-        {
-          "text": "Mentorías TBC",
-          "url": "/soon"
-        }
-      ]
-    },
-    {
-      "name": "Recursos",
-      "submain": [
-        {
-          "text": "Tableros en Excel",
-          "url": "/soon"
-        },
-        {
-          "text": "Tableros de Power BI",
-          "url": "/soon"
-        },
-        {
-          "text": "Ebook",
-          "url": "/soon"
+          "url": "/hrissan.com.ar/#consultoria"
         }
       ]
     },
@@ -109,64 +85,33 @@
   "featuresProgram": [
     {
       "title": "Automatizar procesos de onboarding⁣",
-      "description":
-        "",
+      "description": "",
       "icon": "/automation.png"
     },
     {
       "title": "Crear un chatbot desde cero⁣",
-      "description":
-        "",
+      "description": "",
       "icon": "/chatbot.png"
     },
     {
       "title": "Analizar datos de manera efectiva⁣",
-      "description":
-        "",
+      "description": "",
       "icon": "/data-analytics.png"
     },
     {
       "title": "Desarrollar dashboards impactantes⁣",
-      "description":
-        "",
+      "description": "",
       "icon": "/dashboard.png"
     },
     {
       "title": "Incorporación de IA dentro de proceso de HR",
-      "description":
-        "",
+      "description": "",
       "icon": "/robot.png"
     },
     {
       "title": "Exploraremos herramientas de vanguardia",
       "description": "ChatGPT, Gemini, MAKE, Zapier y mucho más.⁣",
       "icon": "tools.png"
-    }
-  ],
-  "featuresGame": [
-    {
-      "title": "Asincrónico",
-      "description":
-        "",
-      "icon": "/automation.png"
-    },
-    {
-      "title": "10 Niveles⁣⁣",
-      "description":
-        "",
-      "icon": "/chatbot.png"
-    },
-    {
-      "title": "Dificultad: Explorador⁣⁣",
-      "description":
-        "",
-      "icon": "/data-analytics.png"
-    },
-    {
-      "title": "Acceso con usuario y contraseña⁣⁣",
-      "description":
-        "",
-      "icon": "/dashboard.png"
     }
   ],
   "blog": [
@@ -210,7 +155,6 @@
       "pos": "1",
       "description": "Cada vez hay más tecnología para optimizar nuestras tareas o servicios por lo cuál a veces se nos olvida la importancia que tiene el toque humano por este motivo, quiero invitarte a que leas esta primera edición en donde reflexionaré sobre como hacerle frente a este contexto actual."
     },
-    
     {
       "date": "20 de agosto de 2024 - Brian Andersen",
       "title": "#7 ¿Qué es “liderar”?",
