@@ -26,11 +26,16 @@
       "url": "/"
     },
     {
-      "name": "Servicio",
+      "name": "Servicios",
       "submain": [
         {
           "text": "Consultoría",
           "url": "/#consultoria"
+        },
+        {
+          "text": "Formación",
+          "url": "https://hrissan-academy.up.railway.app",
+          "type": "_blank"
         }
       ]
     },
@@ -42,7 +47,7 @@
           "url": "/articles"
         },
         {
-          "text": "Videos de Youtube",
+          "text": "Videos",
           "url": "/videos"
         }
       ]

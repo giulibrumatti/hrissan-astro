@@ -1,11 +1,10 @@
 ---
-
 interface Props {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
-const { title, description} = Astro.props
+const { title, description } = Astro.props;
 ---
 
 <div
@@ -17,10 +16,10 @@ const { title, description} = Astro.props
         >&bull;</span
       >
 
-      <h3 class="text-xl font-bold text-slate-300">{title}</></h3>
+      <h3 class="text-xl font-bold text-slate-300">{title}</h3>
     </div>
   </div>
-  <div class="relative flex flex-col gap-2 pb-4 pt-6 text-gray-300 md:col-span-3">
-    {description}
-  </div>
+</div>
+<div class="relative flex flex-col gap-2 pb-4 pt-6 text-gray-300 md:col-span-3">
+  {description}
 </div>
