@@ -56,6 +56,11 @@
       "name": "Academy",
       "url": "https://hrissan-academy.up.railway.app",
       "type": "_blank"
+    },
+    {
+      "name": "HR Test",
+      "url": "https://hr-maturity-metrics.lovable.app/",
+      "type": "_blank"
     }
   ],
   "hrEvPro": [
